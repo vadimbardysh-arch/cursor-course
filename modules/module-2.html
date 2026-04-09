@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модуль 2 — Мистецтво промтів | Cursor AI</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✍️</text></svg>">
+</head>
+<body>
+
+    <div id="name-overlay" class="name-overlay hidden">
+        <div class="name-card">
+            <h2>👋 Вітаємо на курсі!</h2>
+            <p>Введи своє ім'я, щоб ми могли відслідковувати твій прогрес</p>
+            <input type="text" class="name-input" placeholder="Твоє ім'я..." autofocus>
+            <button class="name-submit">Почати навчання →</button>
+        </div>
+    </div>
+
+    <nav class="module-nav">
+        <a href="module-1.html" class="nav-home">← Модуль 1</a>
+        <span class="nav-title">Модуль 2</span>
+        <a href="module-3.html" class="nav-next">Модуль 3 →</a>
+    </nav>
+
+    <header class="module-header">
+        <div class="module-number">Модуль 2</div>
+        <h1>✍️ Мистецтво промтів</h1>
+        <p class="module-desc">Як правильно формулювати запити, щоб Cursor робив саме те, що потрібно</p>
+        <div class="module-meta">
+            <span>⏱ 30 хвилин</span>
+            <span>📝 5 питань</span>
+        </div>
+    </header>
+
+    <main class="module-content">
+
+        <div class="kitchen-banner">
+            <div class="kitchen-banner-icon">📋</div>
+            <div class="kitchen-banner-text">
+                <strong>На нашій кухні це:</strong>
+                Промти — це замовлення від клієнта. "Зроби щось смачне" — погане замовлення. "Цезар з куркою, без грінок, соус окремо" — ідеальне. Чим точніше замовлення, тим смачніша страва!
+            </div>
+        </div>
+
+        <!-- Section 1: What is a prompt? -->
+        <section class="lesson">
+            <h2>🍽️ Що таке промт?</h2>
+
+            <p>Уяви, що ти прийшов у ресторан. Ти можеш сказати офіціанту:</p>
+
+            <div class="comparison">
+                <div class="comparison-bad">
+                    «Принесіть мені щось смачне»
+                </div>
+                <div class="comparison-good">
+                    «Салат Цезар з куркою, без сухариків, соус окремо»
+                </div>
+            </div>
+
+            <p>В першому випадку офіціант принесе <em>щось</em> — може смачне, а може ні. В другому — ти отримаєш саме те, що хотів.</p>
+
+            <p><strong>Промт — це твоє замовлення для Cursor AI.</strong> Чим точніше ти опишеш, що хочеш — тим краще буде результат. Це найважливіша навичка у роботі з AI.</p>
+
+            <div class="info-box">
+                💡 Промт (prompt) — це просто текстовий запит, який ти пишеш у чат Cursor. Нічого складного — просто правильно сформульоване прохання.
+            </div>
+        </section>
+
+        <!-- Section 2: Structure of a good prompt -->
+        <section class="lesson">
+            <h2>🏗️ Структура хорошого промту</h2>
+
+            <p>Хороший промт — як добре написане ТЗ. Він має три складові:</p>
+
+            <div class="step-by-step">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Контекст — «Над чим я працюю»</h3>
+                        <p>Розкажи Cursor, з чим ти маєш справу. Які файли, які дані, який проєкт.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Задача — «Що потрібно зробити»</h3>
+                        <p>Чітко опиши, який результат ти хочеш отримати. Що створити, змінити, виправити.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Формат — «Як це має виглядати»</h3>
+                        <p>Опиши бажаний вигляд результату: стиль, кольори, структуру, мову.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-box example-good">
+                <div class="example-label">Приклад ідеального промту</div>
+                <p>«В мене є CSV-файл з даними партнера (<code>@partner_data.csv</code>). Створи HTML-звіт з таблицею, яка показує замовлення по тижнях. Використай сучасний дизайн з фірмовими кольорами Bolt (зелений #34D186).»</p>
+            </div>
+
+            <p>Бачиш? Тут є все: <strong>контекст</strong> (CSV-файл з даними), <strong>задача</strong> (HTML-звіт з таблицею по тижнях), <strong>формат</strong> (сучасний дизайн, кольори Bolt).</p>
+
+            <div class="success-box">
+                ✅ Запам'ятай формулу: <strong>Контекст + Задача + Формат = Хороший промт</strong>
+            </div>
+        </section>
+
+        <!-- Section 3: Bad vs Good prompts -->
+        <section class="lesson">
+            <h2>🎯 Погані vs Хороші промти</h2>
+
+            <p>Давай порівняємо реальні приклади. Ліворуч — як НЕ треба, праворуч — як ТРЕБА.</p>
+
+            <h3>Приклад 1: Створення звіту</h3>
+            <div class="comparison">
+                <div class="comparison-bad">
+                    «зроби звіт»
+                </div>
+                <div class="comparison-good">
+                    «Створи HTML-звіт по партнеру Burek за останні 8 тижнів. Дані візьми з <code>@data.csv</code>. Таблиця з колонками: тиждень, замовлення, виручка. Додай графік тренду.»
+                </div>
+            </div>
+
+            <h3>Приклад 2: Виправлення помилки</h3>
+            <div class="comparison">
+                <div class="comparison-bad">
+                    «виправ помилку»
+                </div>
+                <div class="comparison-good">
+                    «В файлі <code>@report.html</code> графік не показує дані за останній тиждень. Перевір, чи правильно фільтруються дати.»
+                </div>
+            </div>
+
+            <h3>Приклад 3: Робота з базою даних</h3>
+            <div class="comparison">
+                <div class="comparison-bad">
+                    «підключи databricks»
+                </div>
+                <div class="comparison-good">
+                    «Напиши SQL-запит до Databricks (dbx), який покаже кількість доставлених замовлень по Мальті за останні 7 днів з таблиці fact_order_delivery.»
+                </div>
+            </div>
+
+            <div class="warning-box">
+                ⚠️ Якщо Cursor зробив не те, що ти хотів — у 90% випадків проблема у промті, а не в AI. Спробуй переформулювати запит точніше.
+            </div>
+        </section>
+
+        <!-- Section 4: @-mentions -->
+        <section class="lesson">
+            <h2>📎 @-згадки — даємо контекст</h2>
+
+            <p>В Cursor є суперсила — символ <code>@</code>. Коли ти пишеш промт і додаєш <code>@</code>, ти вказуєш Cursor конкретно, куди дивитись. Це як показати пальцем: «ось цей файл!».</p>
+
+            <div class="step-by-step">
+                <div class="step">
+                    <div class="step-number">📄</div>
+                    <div class="step-content">
+                        <h3>@файл — конкретний файл</h3>
+                        <p>Наприклад, <code>@report.html</code> — Cursor відразу «бачить» вміст цього файлу і працює саме з ним.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">📁</div>
+                    <div class="step-content">
+                        <h3>@папка — ціла папка</h3>
+                        <p>Наприклад, <code>@Reports/Burek/</code> — Cursor переглядає всі файли в папці. Корисно, коли працюєш з проєктом.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">🔍</div>
+                    <div class="step-content">
+                        <h3>@Codebase — пошук по всьому</h3>
+                        <p>Cursor шукає по всіх файлах у твоєму робочому просторі. Як Google, але для твоїх файлів.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">🌐</div>
+                    <div class="step-content">
+                        <h3>@Web — пошук в інтернеті</h3>
+                        <p>Cursor шукає актуальну інформацію в інтернеті. Корисно для свіжих даних чи документації.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">📚</div>
+                    <div class="step-content">
+                        <h3>@Docs — офіційна документація</h3>
+                        <p>Cursor звертається до офіційної документації інструментів. Наприклад, для Databricks чи Python.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-box example-good">
+                <div class="example-label">Приклад з @-згадкою</div>
+                <p>«Подивись на <code>@data.csv</code> і створи такий самий звіт, як у <code>@Reports/Burek/Weekly_Report.html</code>, але для партнера PizzaDay.»</p>
+            </div>
+
+            <div class="info-box">
+                💡 Коли ти набираєш <code>@</code> у чаті, Cursor покаже список доступних файлів і опцій. Просто починай друкувати назву — і обирай зі списку.
+            </div>
+        </section>
+
+        <!-- Section 5: Cursor Rules -->
+        <section class="lesson">
+            <h2>📏 Cursor Rules — навчаємо Cursor ТВОЇМ правилам</h2>
+
+            <p>Уяви, що у тебе є новий асистент. Перший день — ти пояснюєш йому все: «Відповідай українською», «Завжди фільтруй замовлення зі статусом delivered», «Використовуй кольори Bolt». Другий день — ти повторюєш те саме. Третій — знову…</p>
+
+            <p>А тепер уяви, що ти можеш записати ці правила один раз — і асистент буде їх дотримуватись <strong>завжди</strong>. Це і є <strong>Cursor Rules</strong>.</p>
+
+            <h3>Що таке Rules?</h3>
+            <p>Rules — це файли з постійними інструкціями для Cursor. Вони зберігаються у папці <code>.cursor/rules/</code> у твоєму проєкті і автоматично застосовуються при кожному запиті.</p>
+
+            <h3>Як створити правило?</h3>
+            <div class="step-by-step">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Відкрий налаштування</h3>
+                        <p>Натисни <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> і набери «Cursor Rules».</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Створи новий файл правил</h3>
+                        <p>Або попроси Cursor: «Створи правило в .cursor/rules/ яке каже завжди відповідати українською».</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Готово!</h3>
+                        <p>Cursor тепер буде дотримуватись твого правила при кожному запиті.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Приклади корисних правил</h3>
+            <div class="example-box">
+                <div class="example-label">Правило: мова відповіді</div>
+                <pre><code>Завжди відповідай українською мовою.</code></pre>
+            </div>
+
+            <div class="example-box">
+                <div class="example-label">Правило: запити до Databricks</div>
+                <pre><code>При запитах до Databricks завжди фільтруй order_state = 'delivered'.
+Завжди додавай LIMIT для великих таблиць.
+Використовуй партиційну колонку order_created_date у WHERE.</code></pre>
+            </div>
+
+            <div class="success-box">
+                ✅ Rules = постійні інструкції для асистента. Написав один раз — працює завжди. Не потрібно повторювати кожен раз.
+            </div>
+        </section>
+
+        <!-- Section 6: Three modes -->
+        <section class="lesson">
+            <h2>🎮 Три режими роботи Cursor</h2>
+
+            <p>Cursor має три режими роботи — як три передачі в автомобілі. Кожна для свого.</p>
+
+            <h3>💬 Ask mode — режим запитань</h3>
+            <p>Відкрий чат: <kbd>Cmd</kbd> + <kbd>L</kbd></p>
+            <p>Це як розмова з розумним колегою. Ти питаєш — він відповідає. Cursor <strong>тільки читає</strong> файли і відповідає на питання, але нічого не змінює. Безпечний режим для початківців.</p>
+
+            <div class="example-box">
+                <div class="example-label">Коли використовувати Ask</div>
+                <p>«Поясни, що робить цей код у <code>@report.html</code>?» або «Яка структура таблиці fact_order_delivery?»</p>
+            </div>
+
+            <h3>🤖 Agent mode — режим агента</h3>
+            <p>Відкрий чат: <kbd>Cmd</kbd> + <kbd>L</kbd>, потім обери «Agent» у випадаючому меню</p>
+            <p>Це справжня магія. Agent може <strong>створювати файли, редагувати код, запускати команди в терміналі</strong>. Він сам вирішує, що потрібно зробити, і робить це.</p>
+
+            <div class="example-box example-good">
+                <div class="example-label">Коли використовувати Agent</div>
+                <p>«Створи HTML-звіт з даних <code>@data.csv</code>» — Agent сам прочитає CSV, напише HTML, додасть стилі і графіки.</p>
+            </div>
+
+            <div class="warning-box">
+                ⚠️ Agent може змінювати файли! Завжди переглядай зміни перед тим, як прийняти їх. Cursor покаже тобі, що саме він хоче змінити.
+            </div>
+
+            <h3>📋 Plan mode — режим планування</h3>
+            <p>Agent спочатку <strong>складає план</strong>, показує його тобі, і тільки після твого підтвердження починає виконувати. Ідеально для складних задач.</p>
+
+            <div class="example-box">
+                <div class="example-label">Коли використовувати Plan</div>
+                <p>«Переробити всю систему звітів для 5 партнерів» — Plan спочатку покаже крок-за-кроком що буде робити, а потім ти скажеш «го».</p>
+            </div>
+
+            <div class="info-box">
+                💡 <strong>Порада для початківців:</strong> починай з Ask mode, щоб зрозуміти як працює Cursor. Потім переходь на Agent для реальної роботи. Plan — для масштабних задач.
+            </div>
+        </section>
+
+        <!-- Video placeholder -->
+        <section class="video-section">
+            <h2>🎬 Відео-демонстрація</h2>
+            <div class="video-placeholder">
+                <p>🎥 Тут буде відео з практичними прикладами промтів</p>
+                <p>Скоро з'явиться!</p>
+            </div>
+        </section>
+
+        <!-- Quiz -->
+        <section class="quiz-section" id="quiz">
+            <h2>🧪 Перевір себе</h2>
+            <div id="quiz-container"></div>
+        </section>
+
+    </main>
+
+    <script src="../js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initQuiz(2, [
+                {
+                    type: "choice",
+                    question: "Яка структура хорошого промту?",
+                    options: [
+                        "Просто написати 'зроби звіт'",
+                        "Контекст + Завдання + Формат",
+                        "Тільки посилання на файл",
+                        "Написати максимально коротко"
+                    ],
+                    correct: 1,
+                    explanation: "Хороший промт = замовлення в ресторані 📋 Контекст (що маємо), Завдання (що потрібно), Формат (як має виглядати)."
+                },
+                {
+                    type: "truefalse",
+                    statement: "Довгий детальний промт дає кращий результат, ніж короткий і невизначений.",
+                    correct: true,
+                    explanation: "Абсолютно! Чим детальніше замовлення шеф-повару, тим краща страва. Не бійтеся писати багато — це добре!"
+                },
+                {
+                    type: "match",
+                    question: "З'єднай @-згадку з її призначенням:",
+                    pairs: [
+                        { left: "@file", right: "Конкретний файл" },
+                        { left: "@folder", right: "Вся папка" },
+                        { left: "@Codebase", right: "Пошук по проєкту" },
+                        { left: "@Web", right: "Пошук в інтернеті" }
+                    ]
+                },
+                {
+                    type: "choice",
+                    question: "Що таке Cursor Rules?",
+                    options: [
+                        "Правила гри в Cursor",
+                        "Постійні інструкції, які Cursor виконує щоразу автоматично",
+                        "Налаштування інтерфейсу",
+                        "Список заборонених дій"
+                    ],
+                    correct: 1,
+                    explanation: "Rules — це стандарти ресторану 📏 Як 'завжди подавати гарячим'. Ви пишете правило один раз — Cursor слідує йому завжди."
+                },
+                {
+                    type: "truefalse",
+                    statement: "В режимі Agent Cursor може створювати нові файли та запускати команди в терміналі.",
+                    correct: true,
+                    explanation: "Так! Agent — це шеф-повар на повну потужність. Він не лише радить, а й діє: створює, редагує, запускає."
+                }
+            ]);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модуль 4 — Databricks: робота з даними | Cursor AI Course</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗄️</text></svg>">
+</head>
+<body>
+
+    <!-- Name Input Overlay -->
+    <div id="name-overlay" class="name-overlay hidden">
+        <div class="name-card">
+            <h2>👋 Вітаємо на курсі!</h2>
+            <p>Введи своє ім'я, щоб ми могли відслідковувати твій прогрес</p>
+            <input type="text" class="name-input" placeholder="Твоє ім'я..." autofocus>
+            <button class="name-submit">Почати навчання →</button>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="module-nav">
+        <a href="module-3.html" class="nav-home">← Модуль 3</a>
+        <span class="nav-title">Модуль 4</span>
+        <a href="module-5.html" class="nav-next">Модуль 5 →</a>
+    </nav>
+
+    <!-- Header -->
+    <header class="module-header">
+        <div class="module-number">Модуль 4</div>
+        <h1>🗄️ Databricks — робота з даними</h1>
+        <p class="module-desc">Підключення до бази даних компанії, SQL-запити через Cursor, основні таблиці</p>
+        <div class="module-meta">
+            <span>⏱ 25 хвилин</span>
+            <span>📝 5 питань у квізі</span>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="module-content">
+
+        <div class="kitchen-banner">
+            <div class="kitchen-banner-icon">🏭</div>
+            <div class="kitchen-banner-text">
+                <strong>На нашій кухні це:</strong>
+                Databricks — це величезний оптовий склад продуктів. Мільйони позицій: кожне замовлення, кожен кур'єр, кожен партнер. Шеф-повар знає, як знайти потрібні інгредієнти і замовити доставку на кухню.
+            </div>
+        </div>
+
+        <!-- Section 1 -->
+        <section class="lesson">
+            <h2>1. Що таке Databricks (для нас)?</h2>
+
+            <p>Уяви собі <strong>ВЕЛИЧЕЗНИЙ оптовий склад продуктів</strong>, де зберігаються ВСІ інгредієнти компанії — кожне замовлення, кожен кур'єр, кожен партнер-ресторан. На відміну від Excel (маленька кухонна полиця), цей склад може вмістити <strong>мільйони позицій</strong> і працювати блискавично. 🚀</p>
+
+            <div class="info-box">
+                💡 <strong>Як це працює на кухні:</strong> Ти кажеш шеф-повару: «Мені потрібні свіжі помідори з Мальти за останній тиждень». Шеф-повар (Cursor) йде на склад (Databricks), знаходить потрібний стелаж, бере інгредієнти і приносить на кухню. SQL-запит — це список покупок для складу.
+            </div>
+
+            <p>Ми використовуємо Databricks, щоб:</p>
+            <ul>
+                <li>📊 Витягувати дані для звітів</li>
+                <li>📈 Аналізувати метрики (замовлення, GMV, середні чеки)</li>
+                <li>🔍 Шукати інсайти по партнерах, містах, кур'єрах</li>
+            </ul>
+
+            <div class="success-box">
+                ✅ <strong>Головне:</strong> Ми самі не пишемо код! Ми просимо Cursor написати SQL-запити за нас. Він підключається до Databricks і повертає готові дані.
+            </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="lesson">
+            <h2>2. 🔗 Як працює підключення</h2>
+
+            <p>Щоб Cursor міг «розмовляти» з Databricks, у нас є спеціальне налаштування:</p>
+
+            <div class="step-by-step">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Файл <code>dbx.py</code></h3>
+                        <p>Спеціальний Python-скрипт, який вміє підключатися до Databricks. Думай про нього як про «перекладача» між Cursor та базою даних.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Файл <code>.env</code></h3>
+                        <p>Файл з паролями та ключами доступу. Як ключ-картка від оптового складу — без неї охоронець не пустить. Цей файл вже налаштований, тобі нічого змінювати не потрібно.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Магічне слово <code>dbx</code></h3>
+                        <p>Коли ти пишеш «dbx» у своєму промті, Cursor розуміє, що потрібно звернутися до Databricks. Це як код для замовлення доставки зі складу — без нього шеф-повар навіть не спробує йти на склад!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                ⚠️ <strong>Важливо:</strong> Файл <code>.env</code> — це секретний файл з паролями. Ніколи не відправляй його нікому і не копіюй у чат. Cursor знає, де його знайти, і використовує автоматично.
+            </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="lesson">
+            <h2>3. 🪄 Як попросити Cursor витягнути дані</h2>
+
+            <p>Все дуже просто — достатньо написати промт з магічним словом <strong>dbx</strong>!</p>
+
+            <div class="info-box">
+                💡 <strong>Правило:</strong> Якщо в твоєму промті є слово <code>dbx</code> — Cursor автоматично звернеться до Databricks. Якщо слова <code>dbx</code> немає — він навіть не спробує.
+            </div>
+
+            <h3>Приклади промтів</h3>
+
+            <div class="example-box example-good">
+                <div class="example-label">Приклад 1 — кількість замовлень</div>
+                <p><em>«dbx — покажи кількість доставлених замовлень в Мальті за останній тиждень»</em></p>
+            </div>
+
+            <div class="example-box example-good">
+                <div class="example-label">Приклад 2 — середня вартість</div>
+                <p><em>«dbx — яка середня вартість замовлення по партнеру Burek за останні 30 днів?»</em></p>
+            </div>
+
+            <div class="example-box example-good">
+                <div class="example-label">Приклад 3 — підписки Bolt Plus</div>
+                <p><em>«dbx — витягни дані про підписників Bolt Plus в Мальті за останні 4 тижні»</em></p>
+            </div>
+
+            <div class="comparison">
+                <div class="comparison-bad">
+                    <p>«Покажи дані про замовлення на Мальті»</p>
+                    <p><small>❌ Без <code>dbx</code> — Cursor не зверне увагу на Databricks</small></p>
+                </div>
+                <div class="comparison-good">
+                    <p>«<strong>dbx</strong> — покажи дані про замовлення на Мальті за останні 7 днів»</p>
+                    <p><small>✅ Є <code>dbx</code> + конкретний період</small></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="lesson">
+            <h2>4. 📋 Основні таблиці, які ми використовуємо</h2>
+
+            <p>У нашій «бібліотеці» є різні «полиці» (таблиці). Ось головні, які тобі знадобляться:</p>
+
+            <div class="example-box">
+                <div class="example-label">🏆 Головна таблиця замовлень</div>
+                <h3><code>fact_order_delivery</code></h3>
+                <p>Це <strong>ГОЛОВНА</strong> таблиця з усіма замовленнями. Кожен рядок — одне замовлення. Тут є дати, суми, країни, партнери, статуси. Використовуй її для більшості запитів.</p>
+                <p>Схема: <code>ng_delivery_spark.fact_order_delivery</code></p>
+            </div>
+
+            <div class="example-box">
+                <div class="example-label">💰 Грошові метрики</div>
+                <h3><code>etl_delivery_order_monetary_metrics</code></h3>
+                <p>Фінансові показники по кожному замовленню — GMV, комісії, знижки. Якщо потрібні гроші — іди сюди.</p>
+                <p>Схема: <code>ng_public_spark.etl_delivery_order_monetary_metrics</code></p>
+            </div>
+
+            <div class="example-box">
+                <div class="example-label">🍕 Інформація про партнерів</div>
+                <h3><code>dim_provider_v2</code></h3>
+                <p>Дані про ресторани/партнерів — назви, адреси, категорії. Потрібно знайти конкретний ресторан? Шукай тут.</p>
+                <p>Схема: <code>ng_delivery_spark.dim_provider_v2</code></p>
+            </div>
+
+            <div class="example-box">
+                <div class="example-label">🏙️ Міста</div>
+                <h3><code>dim_delivery_city</code></h3>
+                <p>Інформація про міста — назви, країни, ID. Корисно, коли потрібно зіставити місто з країною.</p>
+                <p>Схема: <code>ng_delivery_spark.dim_delivery_city</code></p>
+            </div>
+
+            <div class="example-box">
+                <div class="example-label">⭐ Підписки Bolt Plus</div>
+                <h3><code>fact_user_subscriptions</code></h3>
+                <p>Дані про підписників Bolt Plus — хто підписався, коли, в якій країні. Для аналізу підписок.</p>
+                <p>Схема: <code>core_models_spark.fact_user_subscriptions</code></p>
+            </div>
+
+            <div class="info-box">
+                🇲🇹 <strong>Для Мальти:</strong> код країни — <code>'mt'</code>, ID міст — <code>324</code> (Valletta region) та <code>831</code> (Gozo region). Але назва колонки з країною <strong>різна в різних таблицях!</strong> Дивись таблицю нижче.
+            </div>
+
+            <h3>Як фільтрувати по країні в різних таблицях</h3>
+
+            <div class="example-box">
+                <div class="example-label">Колонки по таблицях</div>
+                <ul>
+                    <li><code>fact_order_delivery</code> → <code>city_country_code = 'mt'</code></li>
+                    <li><code>etl_delivery_order_monetary_metrics</code> → <code>country = 'mt'</code></li>
+                    <li><code>dim_provider_v2</code> → <code>country_code = 'mt'</code></li>
+                    <li><code>etl_eater_cohorts_lcs_weekly_by_city</code> → <code>country_code = 'mt'</code></li>
+                    <li><code>etl_incentives_provider_targeting_features</code> → <code>provider_country_code = 'mt'</code></li>
+                    <li>Таблиці кур'єрів / кошиків → немає колонки країни, фільтруй по <code>city_id IN (324, 831)</code></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section 5 -->
+        <section class="lesson">
+            <h2>5. ⚠️ Важливі правила (запам'ятай!)</h2>
+
+            <p>Cursor напише SQL за тебе, але є кілька правил, які варто знати. Якщо щось піде не так — перевір ці пункти:</p>
+
+            <div class="error-box">
+                🚫 <strong>ЗАВЖДИ фільтруй <code>order_state = 'delivered'</code></strong><br>
+                Без цього фільтра ти порахуєш скасовані та відхилені замовлення разом з доставленими. Уяви, що рахуєш продажі, але включаєш повернення — цифри будуть неправильні!
+            </div>
+
+            <div class="error-box">
+                🚫 <strong>ЗАВЖДИ додавай дату в WHERE</strong><br>
+                Таблиці мають мільйони рядків. Без фільтра по даті запит буде сканувати ВСЕ і працювати дуже довго (або взагалі зависне). Це як шукати книгу в бібліотеці без каталогу — можна блукати вічно.
+            </div>
+
+            <div class="warning-box">
+                ⚠️ <strong><code>order_created_date</code> в таблиці monetary metrics — це STRING, а не дата!</strong><br>
+                Замість <code>DATE_SUB</code> використовуй порівняння рядків: <code>order_created_date >= '2026-01-01'</code>. Cursor зазвичай знає про це, але якщо бачиш помилку — перевір цей момент.
+            </div>
+
+            <div class="warning-box">
+                ⚠️ <strong>Додавай <code>LIMIT</code> для великих запитів</strong><br>
+                Якщо не впевнений, скільки рядків поверне запит, додай <code>LIMIT 100</code> або <code>LIMIT 1000</code>. Краще спочатку подивитись на маленьку вибірку, ніж чекати 10 хвилин на мільйон рядків.
+            </div>
+
+            <div class="info-box">
+                💡 <strong>Підказка:</strong> Назва колонки з країною <strong>відрізняється</strong> в різних таблицях (дивись секцію вище). Якщо отримуєш помилку «column not found» — скоріш за все, проблема саме в цьому.
+            </div>
+        </section>
+
+        <!-- Section 6 -->
+        <section class="lesson">
+            <h2>6. 🎯 Практичний приклад: від промта до результату</h2>
+
+            <p>Давай пройдемо весь процес від початку до кінця:</p>
+
+            <div class="step-by-step">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Пишемо промт</h3>
+                        <p>Формулюємо, що хочемо дізнатися, і не забуваємо про <code>dbx</code>.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Cursor генерує SQL</h3>
+                        <p>Cursor сам обирає потрібну таблицю, пише запит, і виконує його.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Отримуємо результат</h3>
+                        <p>Дані з'являються прямо в чаті — у вигляді таблиці або тексту.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-box example-good">
+                <div class="example-label">Наш промт</div>
+                <p><em>«dbx — скільки замовлень було доставлено на Мальті за останні 7 днів? Розбий по днях.»</em></p>
+            </div>
+
+            <p>Cursor згенерує і виконає такий SQL-запит:</p>
+
+<pre><code>SELECT order_created_date, COUNT(*) as orders
+FROM ng_delivery_spark.fact_order_delivery
+WHERE city_country_code = 'mt'
+  AND order_state = 'delivered'
+  AND order_created_date >= DATE_SUB(CURRENT_DATE(), 7)
+GROUP BY order_created_date
+ORDER BY order_created_date</code></pre>
+
+            <p>Розберемо, що тут написано (простою мовою):</p>
+
+            <ul>
+                <li><code>SELECT</code> — «покажи мені» дату та кількість замовлень</li>
+                <li><code>FROM</code> — «з таблиці» замовлень</li>
+                <li><code>WHERE</code> — «але тільки ті, де»: країна = Мальта, статус = доставлено, за останні 7 днів</li>
+                <li><code>GROUP BY</code> — «згрупуй по» днях (кожен день — окремий рядок)</li>
+                <li><code>ORDER BY</code> — «відсортуй» від найстарішого до найновішого</li>
+            </ul>
+
+            <div class="success-box">
+                ✅ <strong>Тобі не потрібно це запам'ятовувати!</strong> Cursor напише це сам. Але тепер ти розумієш, що відбувається «під капотом», і можеш перевірити, чи все правильно.
+            </div>
+        </section>
+
+        <!-- Quiz -->
+        <section class="quiz-section" id="quiz">
+            <h2>🧠 Перевір себе</h2>
+            <div id="quiz-container"></div>
+        </section>
+
+    </main>
+
+    <script src="../js/app.js"></script>
+    <script>
+    initQuiz(4, [
+        {
+            type: "choice",
+            question: "Яке 'чарівне слово' потрібно написати в промті, щоб Cursor зробив запит до Databricks?",
+            options: ["sql", "query", "dbx", "data"],
+            correct: 2,
+            explanation: "Магічне слово — 'dbx'! Як код для входу на склад 🏭 Напишіть його в промті — і шеф-повар піде на склад за потрібними інгредієнтами."
+        },
+        {
+            type: "truefalse",
+            statement: "При запитах до Databricks завжди потрібно фільтрувати order_state = 'delivered', щоб не рахувати скасовані замовлення.",
+            correct: true,
+            explanation: "Саме так! Це як перевіряти термін придатності продуктів на складі — бракований товар (скасовані замовлення) не повинен потрапляти у страву."
+        },
+        {
+            type: "match",
+            question: "З'єднай таблицю Databricks з тим, що в ній зберігається:",
+            pairs: [
+                { left: "fact_order_delivery", right: "Усі замовлення" },
+                { left: "dim_provider_v2", right: "Інфо про партнерів" },
+                { left: "dim_delivery_city", right: "Інфо про міста" },
+                { left: "fact_user_subscriptions", right: "Підписки Bolt Plus" }
+            ]
+        },
+        {
+            type: "choice",
+            question: "Чому важливо завжди включати дату у WHERE при запитах до Databricks?",
+            options: [
+                "Бо так красивіше",
+                "Щоб уникнути сканування мільйонів рядків і прискорити запит",
+                "Бо без дати запит не запуститься",
+                "Це необов'язково"
+            ],
+            correct: 1,
+            explanation: "Дата — це як номер секції на складі. Без неї робітник обходить ВЕСЬ склад (мільйони рядків) замість однієї полиці. Запит буде дуже повільним!"
+        },
+        {
+            type: "truefalse",
+            statement: "Код країни для Мальти в таблиці fact_order_delivery — це 'mt'.",
+            correct: true,
+            explanation: "Так! В fact_order_delivery використовується city_country_code = 'mt'. Але увага — в інших таблицях назва колонки може бути іншою!"
+        }
+    ]);
+    </script>
+</body>
+</html>

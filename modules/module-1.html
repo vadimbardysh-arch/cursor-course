@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модуль 1 — Google Drive Desktop — робочий простір</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+</head>
+<body>
+
+    <!-- Name Input Overlay -->
+    <div id="name-overlay" class="name-overlay hidden">
+        <div class="name-card">
+            <h2>👋 Вітаємо на курсі!</h2>
+            <p>Введи своє ім'я, щоб ми могли відслідковувати твій прогрес</p>
+            <input type="text" class="name-input" placeholder="Твоє ім'я..." autofocus>
+            <button class="name-submit">Почати навчання →</button>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="module-nav">
+        <a href="module-0.html" class="nav-home">← Попередній</a>
+        <span class="nav-title">Модуль 1</span>
+        <a href="module-2.html" class="nav-next">Далі →</a>
+    </nav>
+
+    <!-- Header -->
+    <header class="module-header">
+        <div class="module-number">Модуль 1</div>
+        <h1>📁 Google Drive Desktop — робочий простір</h1>
+        <p class="module-desc">Як з'єднати Google Drive з Cursor, щоб AI бачив твої файли</p>
+        <div class="module-meta">
+            <span>⏱ 10 хвилин</span>
+            <span>📝 4 питання</span>
+            <span>🎯 Для початківців</span>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="module-content">
+
+        <div class="kitchen-banner">
+            <div class="kitchen-banner-icon">🧊</div>
+            <div class="kitchen-banner-text">
+                <strong>На нашій кухні це:</strong>
+                Google Drive Desktop — це холодильник на кухні. Оптовий склад (хмара) далеко, а холодильник — прямо під рукою. Все автоматично поповнюється, а шеф-повар бере інгредієнти прямо звідти.
+            </div>
+        </div>
+
+        <!-- Lesson 1: What is Google Drive Desktop -->
+        <section class="lesson">
+            <h2>🌐 Що таке Google Drive Desktop?</h2>
+
+            <p>Пам'ятаєш наш ресторан? Є великий <strong>оптовий склад</strong> (Google Drive в хмарі) з усіма продуктами. Але склад далеко — шеф-повар не може бігати туди щоразу, коли потрібен інгредієнт.</p>
+
+            <p>Тому на кухні стоїть <strong>холодильник</strong> — Google Drive Desktop. Він автоматично поповнюється зі складу: поклав продукт на склад — він з'явився в холодильнику. І навпаки. А шеф-повар (Cursor) бере все прямо з холодильника!</p>
+
+            <div class="info-box">
+                💡 <strong>Простими словами:</strong> Google Drive Desktop — це програма-холодильник 🧊. Вона робить так, що файли з хмарного Google Drive з'являються як звичайна папка на Mac. Cursor працює з цією папкою напряму.
+            </div>
+
+            <p>В Finder ти бачиш папку «Google Drive» — заходиш, і там всі твої хмарні файли, як ніби вони лежать на комп'ютері. Шеф-повар (Cursor) тепер може їх бачити і використовувати!</p>
+
+            <div class="example-box example-good">
+                <div class="example-label">Як це виглядає</div>
+                <p>Ти відкриваєш Finder на Mac → зліва бачиш «Google Drive» → заходиш → бачиш усі свої файли, як ніби вони лежать прямо на комп'ютері.</p>
+            </div>
+        </section>
+
+        <!-- Lesson 2: Why do we need it -->
+        <section class="lesson">
+            <h2>🔗 Навіщо це потрібно для Cursor?</h2>
+
+            <p>Ось ключовий момент: <strong>Cursor працює тільки з папками на твоєму комп'ютері</strong>. Він не вміє заходити в браузер і відкривати drive.google.com.</p>
+
+            <p>Але якщо ти встановиш Google Drive Desktop — файли з хмари стануть «локальними». І тоді Cursor зможе їх бачити!</p>
+
+            <div class="comparison">
+                <div class="comparison-bad">
+                    <p><strong>Без Google Drive Desktop:</strong></p>
+                    <p>Файли тільки в браузері → Cursor їх не бачить → не може допомогти</p>
+                </div>
+                <div class="comparison-good">
+                    <p><strong>З Google Drive Desktop:</strong></p>
+                    <p>Файли у папці на комп'ютері → Cursor їх бачить → може читати, редагувати, створювати</p>
+                </div>
+            </div>
+
+            <div class="success-box">
+                ✅ <strong>Формула:</strong> Холодильник (Google Drive Desktop) + Кухня (Cursor) = шеф-повар має доступ до всіх інгредієнтів (файлів) прямо під рукою
+            </div>
+        </section>
+
+        <!-- Lesson 3: Installation step by step -->
+        <section class="lesson">
+            <h2>⬇️ Встановлення Google Drive Desktop (macOS)</h2>
+
+            <p>Якщо у тебе вже встановлений Google Drive Desktop — пропусти цей розділ. Якщо ні — ось покрокова інструкція:</p>
+
+            <div class="step-by-step">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Відкрий сторінку завантаження</h3>
+                        <p>Перейди за посиланням: <a href="https://www.google.com/drive/download/" target="_blank">google.com/drive/download</a></p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Завантаж програму</h3>
+                        <p>Натисни кнопку «Download Drive for Desktop». Завантажиться .dmg файл</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Встанови програму</h3>
+                        <p>Відкрий завантажений файл і перетягни іконку Google Drive у папку Applications (як зазвичай на Mac)</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Увійди у свій акаунт</h3>
+                        <p>Запусти Google Drive, натисни «Sign in» і увійди своїм <strong>робочим</strong> акаунтом (ім'я@bolt.eu)</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Готово! Знайди свої файли</h3>
+                        <p>Відкрий Finder. Зліва у боковій панелі з'явиться «Google Drive». Твої файли тепер тут:</p>
+                    </div>
+                </div>
+            </div>
+
+            <pre><code>~/Library/CloudStorage/GoogleDrive-your.email@bolt.eu/My Drive</code></pre>
+
+            <div class="warning-box">
+                ⚠️ <strong>Важливо:</strong> Використовуй саме <strong>робочий акаунт</strong> (@bolt.eu). Якщо у тебе є особистий Google-акаунт — він покаже інші файли.
+            </div>
+        </section>
+
+        <!-- Video section -->
+        <section class="video-section">
+            <h2>🎬 Відео-інструкція</h2>
+            <div class="video-placeholder">
+                <p>🎥 Відео буде додано найближчим часом</p>
+                <p>Тут буде скрінкаст із встановленням Google Drive Desktop та підключенням до Cursor</p>
+            </div>
+        </section>
+
+        <!-- Lesson 4: Open in Cursor -->
+        <section class="lesson">
+            <h2>🔓 Як відкрити Google Drive папку в Cursor</h2>
+
+            <p>Тепер, коли Google Drive Desktop встановлено — час підключити його до Cursor!</p>
+
+            <div class="step-by-step">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Відкрий Cursor</h3>
+                        <p>Запусти програму Cursor на своєму Mac</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>File → Open Folder</h3>
+                        <p>У верхньому меню натисни <strong>File</strong>, потім <strong>Open Folder</strong></p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Перейди до Google Drive</h3>
+                        <p>У Finder навігуй до: зліва натисни «Google Drive» → «My Drive» → знайди свою робочу папку</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Обери папку та натисни Open</h3>
+                        <p>Обери папку свого проєкту (наприклад, «Vadym_Cursor») і натисни <strong>Open</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="success-box">
+                ✅ <strong>Готово!</strong> Тепер Cursor бачить усі файли з твого Google Drive. Ти можеш просити AI працювати з ними — редагувати, аналізувати, створювати нові.
+            </div>
+        </section>
+
+        <!-- Lesson 5: What is a workspace -->
+        <section class="lesson">
+            <h2>🏠 Що таке «Workspace»</h2>
+
+            <p>Ти часто зустрічатимеш слово <strong>workspace</strong> (воркспейс). Не лякайся — це просто <strong>папка, яку ти відкрив у Cursor</strong>.</p>
+
+            <p>Коли ти відкриваєш папку через File → Open Folder — ця папка стає твоїм workspace. Cursor бачить все, що в ній є: файли, підпапки, зображення, скрипти.</p>
+
+            <div class="info-box">
+                💡 <strong>Аналогія:</strong> Workspace — це як робочий стіл у реальному житті. Ти розклав на ньому документи — і працюєш саме з ними. Cursor бачить тільки те, що на «столі» (у відкритій папці).
+            </div>
+
+            <div class="example-box">
+                <div class="example-label">Приклад</div>
+                <p>Ти відкрив папку <code>Vadym_Cursor</code> — це твій workspace. Cursor бачить:</p>
+                <ul>
+                    <li>📁 Reports/ — папка зі звітами</li>
+                    <li>📁 Course/ — цей курс</li>
+                    <li>📄 Script Prompt.md — файли з промтами</li>
+                    <li>…і все інше, що лежить у цій папці</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Lesson 6: Tips -->
+        <section class="lesson">
+            <h2>💡 Поради для зручної роботи</h2>
+
+            <h3>📂 Організуй файли в папки</h3>
+            <p>Чим краще організовані файли — тим легше Cursor їх знаходить і з ними працює. Розділяй звіти, скрипти, дані по різних папках.</p>
+
+            <div class="example-box example-good">
+                <div class="example-label">Гарна структура</div>
+                <pre><code>My Drive/
+├── Vadym_Cursor/          ← твій workspace
+│   ├── Reports/           ← готові звіти
+│   ├── Course/            ← матеріали курсу
+│   ├── Scripts/           ← скрипти та автоматизація
+│   └── Data/              ← дані для аналізу</code></pre>
+            </div>
+
+            <h3>🚫 Не клади величезні файли</h3>
+            <p>Google Drive Desktop синхронізує файли між комп'ютером і хмарою. Великі файли (відео, архіви на гігабайти) можуть сповільнити синхронізацію. Тримай у робочій папці тільки те, з чим працюєш.</p>
+
+            <h3>🔄 Синхронізація автоматична</h3>
+            <p>Все, що ти змінюєш у папці Google Drive на комп'ютері — автоматично оновлюється в хмарі. І навпаки. Не потрібно нічого «зберігати в хмару» вручну.</p>
+
+            <div class="warning-box">
+                ⚠️ <strong>Пам'ятай:</strong> Якщо ти видалиш файл із папки Google Drive на комп'ютері — він видалиться і з Google Drive у хмарі! Будь уважним з видаленням.
+            </div>
+        </section>
+
+        <!-- Quiz -->
+        <section class="quiz-section" id="quiz">
+            <h2>📝 Перевір себе</h2>
+            <div id="quiz-container"></div>
+        </section>
+
+    </main>
+
+    <script src="../js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initQuiz(1, [
+        {
+            type: "choice",
+            question: "Що робить Google Drive Desktop?",
+            options: [
+                "Створює нові Google-документи",
+                "Робить хмарні файли доступними як звичайну папку на комп'ютері",
+                "Замінює Google Chrome",
+                "Автоматично завантажує фільми"
+            ],
+            correct: 1,
+            explanation: "Google Drive Desktop — це холодильник 🧊 на вашій кухні. Він робить хмарні файли доступними локально, щоб Cursor (шеф-повар) міг з ними працювати."
+        },
+        {
+            type: "truefalse",
+            statement: "Cursor може працювати з файлами в Google Drive без встановлення Google Drive Desktop.",
+            correct: false,
+            explanation: "Ні! Cursor працює тільки з локальними папками. Без Google Drive Desktop він не бачить хмарні файли. Потрібен холодильник на кухні!"
+        },
+        {
+            type: "choice",
+            question: "Що таке 'workspace' (робочий простір) в Cursor?",
+            options: [
+                "Спеціальна програма для роботи",
+                "Папка, яку ви відкрили в Cursor",
+                "Хмарне сховище",
+                "Налаштування комп'ютера"
+            ],
+            correct: 1,
+            explanation: "Workspace — це просто папка, яку ви відкрили в Cursor через File → Open Folder. Все, що в цій папці — Cursor бачить."
+        },
+        {
+            type: "match",
+            question: "З'єднай поняття з їх кухонною аналогією:",
+            pairs: [
+                { left: "Google Drive (хмара)", right: "Оптовий склад" },
+                { left: "Google Drive Desktop", right: "Холодильник" },
+                { left: "Cursor", right: "Кухня" },
+                { left: "Файли у папці", right: "Інгредієнти" }
+            ]
+        }
+    ]);
+        });
+    </script>
+</body>
+</html>

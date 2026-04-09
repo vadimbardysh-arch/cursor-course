@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модуль 0 — Що таке Cursor і навіщо він нам?</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+</head>
+<body>
+
+    <!-- Name Input Overlay -->
+    <div id="name-overlay" class="name-overlay hidden">
+        <div class="name-card">
+            <h2>👋 Вітаємо на курсі!</h2>
+            <p>Введи своє ім'я, щоб ми могли відслідковувати твій прогрес</p>
+            <input type="text" class="name-input" placeholder="Твоє ім'я..." autofocus>
+            <button class="name-submit">Почати навчання →</button>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="module-nav">
+        <a href="../index.html" class="nav-home">← На головну</a>
+        <span class="nav-title">Модуль 0</span>
+        <a href="module-1.html" class="nav-next">Далі →</a>
+    </nav>
+
+    <!-- Header -->
+    <header class="module-header">
+        <div class="module-number">Модуль 0</div>
+        <h1>🚀 Що таке Cursor і навіщо він нам?</h1>
+        <p class="module-desc">Знайомство з інструментом, який перетворить твою роботу з файлами, даними та звітами</p>
+        <div class="module-meta">
+            <span>⏱ 15 хвилин</span>
+            <span>📝 5 питань</span>
+            <span>🎯 Для початківців</span>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="module-content">
+
+        <div class="kitchen-banner">
+            <div class="kitchen-banner-icon">🏪</div>
+            <div class="kitchen-banner-text">
+                <strong>На нашій кухні це:</strong>
+                Cursor — це ваш ресторан. Вся операція в одному місці: кухня, зал, склад, каса. Відкриваєте Cursor — і маєте доступ до всього, що потрібно для роботи.
+            </div>
+        </div>
+
+        <!-- Lesson 1: What is Cursor -->
+        <section class="lesson">
+            <h2>🤔 Що таке Cursor?</h2>
+
+            <p>Уяви <strong>ресторан</strong>. У тебе є кухня, холодильник з продуктами, обладнання, склад — і <strong>шеф-повар</strong>, який все це використовує, щоб приготувати страву. Тобі потрібно лише сказати: "Хочу Цезар з куркою" — і він зробить.</p>
+
+            <p><strong>Cursor — це весь ресторан в одній програмі.</strong> Ти відкриваєш його, даєш "замовлення" (пишеш запит українською мовою) — і вбудований AI-шеф-повар робить все за тебе: створює файли, пише запити, генерує звіти.</p>
+
+            <div class="info-box">
+                💡 <strong>Простими словами:</strong> Cursor = ваш ресторан 🏪 Всередині є шеф-повар (AI), холодильник (файли), обладнання (інструменти) — все потрібне для "приготування страв" (звітів, аналітики, автоматизацій).
+            </div>
+
+            <p>Якщо ти знаєш ChatGPT — Cursor працює схоже, але з суперсилою: він <strong>бачить твої файли</strong> і може їх створювати, редагувати та запускати команди. Ти просто пишеш, що потрібно — людською мовою, українською — і він робить.</p>
+
+            <div class="example-box example-good">
+                <div class="example-label">Приклад запиту</div>
+                <p>«Напиши мені SQL-запит, який покаже топ-10 ресторанів за кількістю замовлень у Києві за останній тиждень»</p>
+                <p>І Cursor напише готовий запит, який ти зможеш запустити в Databricks. Без знання SQL!</p>
+            </div>
+        </section>
+
+        <!-- Lesson 2: Why do we need it -->
+        <section class="lesson">
+            <h2>💼 Навіщо він нам? Ми ж не програмісти!</h2>
+
+            <p>Саме! Ми <strong>не програмісти</strong> — і в цьому вся магія. Cursor дозволяє робити «програмістські» речі без знання програмування. Ось що він вміє робити для нас:</p>
+
+            <div class="step-by-step">
+                <div class="step">
+                    <div class="step-number">🗄️</div>
+                    <div class="step-content">
+                        <h3>Писати SQL-запити до Databricks</h3>
+                        <p>Замість вивчення SQL ти просто описуєш, які дані потрібні, і Cursor генерує запит</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">📊</div>
+                    <div class="step-content">
+                        <h3>Створювати красиві HTML-звіти</h3>
+                        <p>Ті самі звіти з графіками та таблицями, які можна надсилати партнерам і колегам</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">⚡</div>
+                    <div class="step-content">
+                        <h3>Автоматизувати рутину</h3>
+                        <p>Замість ручної роботи — написати один скрипт, який робитиме все за тебе щотижня</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">🐙</div>
+                    <div class="step-content">
+                        <h3>Працювати з GitHub</h3>
+                        <p>Зберігати файли, публікувати звіти — без знання Git-команд</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">🔌</div>
+                    <div class="step-content">
+                        <h3>Підключатися до Slack і Jira</h3>
+                        <p>Шукати інформацію, створювати задачі, надсилати повідомлення — все з одного місця</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="success-box">
+                ✅ <strong>Головне:</strong> тобі не потрібно знати код. Cursor — це як перекладач між людською мовою та мовою комп'ютера. Ти кажеш, що хочеш, а він перетворює це на код.
+            </div>
+        </section>
+
+        <!-- Lesson 3: Interface -->
+        <section class="lesson">
+            <h2>🖥️ Інтерфейс Cursor — що де знаходиться</h2>
+
+            <p>Коли ти відкриєш Cursor, побачиш вікно, розділене на кілька частин. Не лякайся — зараз розберемось!</p>
+
+            <h3>📂 Ліва панель — Провідник файлів</h3>
+            <p>Це як <strong>Finder на Mac</strong> (або Провідник у Windows). Тут відображаються всі файли та папки, з якими ти працюєш. Можна клікати на файли, щоб їх відкрити.</p>
+
+            <h3>📝 Центральна частина — Робоча область</h3>
+            <p>Тут відкриваються файли. Як вкладки у браузері — можна мати кілька відкритих файлів одночасно і перемикатися між ними.</p>
+
+            <h3>⬛ Знизу — Термінал</h3>
+            <p>Це «командний рядок». Уяви, що це <strong>чат з твоїм комп'ютером</strong>, де ти пишеш команди, а він їх виконує. Наприклад, запуск Python-скрипту або SQL-запиту. Не хвилюйся — Cursor сам пише ці команди за тебе.</p>
+
+            <h3>💬 Права панель — AI-чат</h3>
+            <p>Це найважливіша частина! Тут ти <strong>розмовляєш з шеф-поваром</strong>. Пишеш замовлення (запит) — отримуєш страву (результат). Шеф бачить весь холодильник (файли) і може готувати (створювати/змінювати).</p>
+
+            <div class="info-box">
+                💡 <strong>Аналогія:</strong> Cursor — це як офіс. Ліва панель — шафа з документами. Центр — твій робочий стіл. Низ — телефон для команд. Праворуч — розумний колега, який завжди готовий допомогти.
+            </div>
+        </section>
+
+        <!-- Video section -->
+        <section class="video-section">
+            <h2>🎬 Відео-огляд інтерфейсу</h2>
+            <div class="video-placeholder">
+                <p>🎥 Відео буде додано найближчим часом</p>
+                <p>Тут буде скрінкаст з оглядом інтерфейсу Cursor</p>
+            </div>
+        </section>
+
+        <!-- Lesson 4: Three modes -->
+        <section class="lesson">
+            <h2>🎭 Три режими роботи</h2>
+
+            <p>В Cursor є три режими — як три рівні «самостійності» твого AI-асистента:</p>
+
+            <h3>1️⃣ Ask Mode — «Запитай»</h3>
+            <p>Шеф-повар тільки <strong>консультує</strong>: відповідає на питання, дивиться на інгредієнти, але <strong>нічого не готує</strong>. Безпечний режим для початку — як попросити пораду.</p>
+            <div class="example-box">
+                <div class="example-label">Коли використовувати</div>
+                <p>«Поясни, що робить цей SQL-запит» або «Яка структура цього файлу?»</p>
+            </div>
+
+            <h3>2️⃣ Agent Mode — «Агент»</h3>
+            <p>Тут AI отримує <strong>суперсили</strong>: він може створювати файли, редагувати їх, запускати команди в терміналі. Це як дати помічнику не тільки голос, а й руки.</p>
+            <div class="example-box">
+                <div class="example-label">Коли використовувати</div>
+                <p>«Створи HTML-звіт з цими даними» або «Запусти SQL-запит і покажи результат»</p>
+            </div>
+
+            <div class="warning-box">
+                ⚠️ <strong>Увага:</strong> В Agent Mode AI може змінювати файли. Завжди перевіряй, що він зробив, перед тим як зберігати зміни. Cursor завжди показує diff (різницю) — що було і що стало.
+            </div>
+
+            <h3>3️⃣ Plan Mode — «Планувальник»</h3>
+            <p>AI спочатку <strong>складає план</strong>, показує його тобі, і чекає твоєї згоди. Тільки після «ОК» починає працювати. Як архітектор, який спочатку малює креслення.</p>
+            <div class="example-box">
+                <div class="example-label">Коли використовувати</div>
+                <p>Для складних задач: «Створи систему автоматичних щотижневих звітів» — краще спочатку побачити план</p>
+            </div>
+
+            <div class="comparison">
+                <div class="comparison-bad">
+                    <p><strong>Ask:</strong> «Що це за файл?»</p>
+                    <p>AI лише відповідає, нічого не чіпає</p>
+                </div>
+                <div class="comparison-good">
+                    <p><strong>Agent:</strong> «Виправ помилку в цьому файлі»</p>
+                    <p>AI знаходить помилку і сам виправляє</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lesson 5: How to open a folder -->
+        <section class="lesson">
+            <h2>📂 Як відкрити папку в Cursor</h2>
+
+            <p>Cursor працює з <strong>папками</strong>, а не з окремими файлами. Ти відкриваєш папку — і він бачить все, що в ній є. Це називається «workspace» (робочий простір).</p>
+
+            <div class="step-by-step">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Відкрий Cursor</h3>
+                        <p>Запусти програму Cursor на своєму Mac</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>File → Open Folder</h3>
+                        <p>В меню зверху натисни <strong>File</strong>, потім <strong>Open Folder</strong></p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Обери свою папку</h3>
+                        <p>Знайди потрібну папку (наприклад, на Google Drive) і натисни <strong>Open</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="success-box">
+                ✅ Після відкриття папки — всі файли з'являться у лівій панелі. Cursor тепер «бачить» весь вміст і може з ним працювати!
+            </div>
+        </section>
+
+        <!-- Lesson 6: Navigation shortcuts -->
+        <section class="lesson">
+            <h2>⌨️ Корисні гарячі клавіші</h2>
+
+            <p>Щоб швидко працювати в Cursor, варто запам'ятати два комбо:</p>
+
+            <h3>🔍 Пошук файлів — <kbd>Cmd</kbd> + <kbd>P</kbd></h3>
+            <p>Натисни цю комбінацію — з'явиться поле пошуку. Просто починай набирати назву файлу, і Cursor знайде його за секунду. Як Spotlight на Mac, але тільки для твоєї папки.</p>
+
+            <h3>🎛️ Палітра команд — <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd></h3>
+            <p>Це «пульт управління» Cursor. Тут можна знайти будь-яку дію: змінити тему, налаштувати шрифт, встановити розширення. Просто набирай, що шукаєш.</p>
+
+            <div class="info-box">
+                💡 <strong>Порада:</strong> Не потрібно запам'ятовувати все одразу. Почни з <kbd>Cmd</kbd> + <kbd>P</kbd> для пошуку файлів — це найкорисніша комбінація.
+            </div>
+        </section>
+
+        <!-- Quiz -->
+        <section class="quiz-section" id="quiz">
+            <h2>📝 Перевір себе</h2>
+            <div id="quiz-container"></div>
+        </section>
+
+    </main>
+
+    <script src="../js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initQuiz(0, [
+        {
+            type: "choice",
+            question: "Що таке Cursor?",
+            options: [
+                "Текстовий редактор без AI",
+                "AI-асистент, який бачить і редагує ваші файли",
+                "Браузер для інтернету",
+                "Програма для малювання"
+            ],
+            correct: 1,
+            explanation: "Cursor — це AI-асистент (шеф-повар 👨‍🍳), який може бачити всі файли у вашій папці та створювати/редагувати їх за вашим запитом."
+        },
+        {
+            type: "truefalse",
+            statement: "В режимі Ask Cursor може створювати та змінювати файли на вашому комп'ютері.",
+            correct: false,
+            explanation: "Ask — це режим \"тільки розмова\". Він відповідає на питання, але НЕ змінює файли. Для змін потрібен режим Agent."
+        },
+        {
+            type: "choice",
+            question: "Який режим Cursor найбільш потужний — може створювати файли, запускати команди та виконувати складні завдання?",
+            options: ["Ask", "Plan", "Agent", "Debug"],
+            correct: 2,
+            explanation: "Agent — це ваш шеф-повар на повну потужність 👨‍🍳 Він може все: створювати, редагувати, запускати команди."
+        },
+        {
+            type: "match",
+            question: "З'єднай елементи інтерфейсу Cursor з їх функцією:",
+            pairs: [
+                { left: "Ліва панель", right: "Файловий провідник" },
+                { left: "Центральна зона", right: "Редактор файлів" },
+                { left: "Нижня панель", right: "Термінал" },
+                { left: "Права панель", right: "AI чат" }
+            ]
+        },
+        {
+            type: "truefalse",
+            statement: "Cmd+P дозволяє швидко знайти та відкрити будь-який файл у Cursor.",
+            correct: true,
+            explanation: "Так! Cmd+P — це швидкий пошук файлів. Одна з найкорисніших гарячих клавіш!"
+        }
+    ]);
+        });
+    </script>
+</body>
+</html>

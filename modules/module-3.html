@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модуль 3 — MCP: підключення зовнішніх сервісів | Cursor AI</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔌</text></svg>">
+</head>
+<body>
+
+    <div id="name-overlay" class="name-overlay hidden">
+        <div class="name-card">
+            <h2>👋 Вітаємо на курсі!</h2>
+            <p>Введи своє ім'я, щоб ми могли відслідковувати твій прогрес</p>
+            <input type="text" class="name-input" placeholder="Твоє ім'я..." autofocus>
+            <button class="name-submit">Почати навчання →</button>
+        </div>
+    </div>
+
+    <nav class="module-nav">
+        <a href="module-2.html" class="nav-home">← Модуль 2</a>
+        <span class="nav-title">Модуль 3</span>
+        <a href="module-4.html" class="nav-next">Модуль 4 →</a>
+    </nav>
+
+    <header class="module-header">
+        <div class="module-number">Модуль 3</div>
+        <h1>🔌 MCP — підключення зовнішніх сервісів</h1>
+        <p class="module-desc">Як навчити Cursor працювати зі Slack, Jira, Confluence та іншими інструментами</p>
+        <div class="module-meta">
+            <span>⏱ 20 хвилин</span>
+            <span>📝 4 питання</span>
+        </div>
+    </header>
+
+    <main class="module-content">
+
+        <div class="kitchen-banner">
+            <div class="kitchen-banner-icon">🔌</div>
+            <div class="kitchen-banner-text">
+                <strong>На нашій кухні це:</strong>
+                MCP — це кухонне обладнання. Міксер = Slack, духовка = Jira, блендер = Confluence. Підключаєш в розетку — і шеф-повар може ними користуватися!
+            </div>
+        </div>
+
+        <!-- Section 1: What is MCP? -->
+        <section class="lesson">
+            <h2>🔌 Що таке MCP?</h2>
+
+            <p>Уяви кухню без обладнання — тільки стіл і ніж. Готувати можна, але повільно і обмежено. А тепер додай <strong>міксер, духовку, блендер, мікрохвильовку</strong> — і ти можеш готувати будь-що!</p>
+
+            <p><strong>MCP — це кухонне обладнання для Cursor.</strong> Кожне "обладнання" підключає зовнішній сервіс: Slack, Jira, Confluence тощо. Підключив в розетку — і шеф-повар (AI) може ним користуватися.</p>
+
+            <div class="info-box">
+                💡 MCP розшифровується як Model Context Protocol. Але запам'ятовувати не потрібно. Просто думай про MCP як про <strong>обладнання</strong>, яке розширює можливості кухні.
+            </div>
+
+            <p>Без MCP шеф-повар працює тільки з інгредієнтами, що вже на кухні (файли на комп'ютері). З MCP — він може зателефонувати на склад (Slack), перевірити замовлення (Jira), відкрити книгу рецептів (Confluence) та навіть замовити доставку з іншого ресторану (Firecrawl). Різниця величезна!</p>
+        </section>
+
+        <!-- Section 2: What can MCP do? -->
+        <section class="lesson">
+            <h2>🚀 Що вміє MCP?</h2>
+
+            <p>Ось кілька прикладів того, що можна робити з MCP, не виходячи з Cursor:</p>
+
+            <div class="step-by-step">
+                <div class="step">
+                    <div class="step-number">💬</div>
+                    <div class="step-content">
+                        <h3>Slack — повідомлення</h3>
+                        <p>Читати та надсилати повідомлення в каналах Slack. Наприклад: «Надішли в #general повідомлення: Звіт за тиждень готовий».</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">🎫</div>
+                    <div class="step-content">
+                        <h3>Jira — тікети</h3>
+                        <p>Створювати нові тікети, шукати існуючі, додавати коментарі. «Створи тікет в Jira: Підготувати звіт для партнера X, пріоритет Medium».</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">📖</div>
+                    <div class="step-content">
+                        <h3>Confluence — документація</h3>
+                        <p>Шукати по базі знань компанії. «Знайди в Confluence документацію про програму Bolt Plus».</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">🌐</div>
+                    <div class="step-content">
+                        <h3>Firecrawl — веб-сторінки</h3>
+                        <p>Читати будь-яку вебсторінку. «Відкрий цей URL і зроби короткий переказ».</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">🗄️</div>
+                    <div class="step-content">
+                        <h3>Бази даних</h3>
+                        <p>Пряме підключення до баз даних без додаткових скриптів.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="success-box">
+                ✅ Головна ідея: MCP дозволяє робити все в одному місці — не перемикаючись між десятком вкладок у браузері.
+            </div>
+        </section>
+
+        <!-- Section 3: How to set up MCP -->
+        <section class="lesson">
+            <h2>⚙️ Як налаштувати MCP</h2>
+
+            <p>Є <strong>два способи</strong> підключити обладнання на кухню. Перший — найпростіший!</p>
+
+            <h3>Спосіб 1: MCP Маркетплейс (найпростіший!)</h3>
+
+            <p>Cursor має вбудований <strong>маркетплейс</strong> — це як магазин кухонного обладнання прямо біля вашого ресторану. Заходиш, вибираєш, підключаєш — все!</p>
+
+            <div class="step-by-step">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Відкрий налаштування Cursor</h3>
+                        <p>Натисни <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> → набери «Cursor Settings». Або: <strong>Cursor → Settings → Cursor Settings</strong>.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Перейди в розділ MCP</h3>
+                        <p>У лівій панелі натисни <strong>«MCP»</strong>.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Натисни «Add MCP Server»</h3>
+                        <p>Відкриється список доступних MCP серверів — це і є <strong>маркетплейс</strong>. Тут можна знайти Slack, Atlassian, Firecrawl та багато інших.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Вибери потрібний і натисни Install</h3>
+                        <p>Cursor сам все завантажить та налаштує. Тобі залишиться лише авторизуватися (якщо потрібно).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="success-box">
+                ✅ <strong>Маркетплейс — це найлегший шлях!</strong> Не потрібно нічого копіювати чи вставляти вручну. Просто вибрав і встановив, як додаток на телефон.
+            </div>
+
+            <h3>Спосіб 2: Ручна конфігурація (для досвідчених)</h3>
+
+            <p>Якщо потрібного MCP немає в маркетплейсі, або потрібні особливі налаштування — можна додати вручну:</p>
+
+            <div class="step-by-step">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>В розділі MCP натисни «Add new MCP server»</h3>
+                        <p>Обери режим ручного додавання.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Вставити конфігурацію</h3>
+                        <p>Кожен MCP має свою конфігурацію у форматі JSON (отримаєш від адміна або з документації). Вставляєш — і сервіс підключено!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                💡 <strong>Порада:</strong> Завжди спочатку перевір маркетплейс — там є більшість популярних MCP. Ручне налаштування потрібне рідко.
+            </div>
+        </section>
+
+        <!-- Section 4: Slack MCP setup -->
+        <section class="lesson">
+            <h2>💬 Налаштування Slack MCP</h2>
+
+            <p>Slack — один з найпопулярніших MCP. Після підключення ти зможеш читати і писати повідомлення прямо з Cursor.</p>
+
+            <h3>Крок за кроком:</h3>
+            <div class="step-by-step">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Відкрий MCP налаштування</h3>
+                        <p><kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> → «Cursor Settings» → MCP</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Натисни «Add new MCP server»</h3>
+                        <p>Обери тип «Command» або вставте конфігурацію JSON.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Вставити конфігурацію Slack</h3>
+                        <p>Конфігурація виглядає приблизно так:</p>
+                    </div>
+                </div>
+            </div>
+
+            <pre><code>{
+  "mcpServers": {
+    "slack": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/slack-mcp"],
+      "env": {
+        "SLACK_BOT_TOKEN": "xoxb-your-token-here",
+        "SLACK_TEAM_ID": "T12345678"
+      }
+    }
+  }
+}</code></pre>
+
+            <div class="warning-box">
+                ⚠️ <strong>SLACK_BOT_TOKEN</strong> — це секретний ключ. Його видає адміністратор Slack. Ніколи не діліться токенами з іншими людьми і не публікуй їх.
+            </div>
+
+            <h3>Після налаштування можеш писати:</h3>
+            <div class="example-box example-good">
+                <div class="example-label">Приклад промту зі Slack MCP</div>
+                <p>«Надішли повідомлення в канал #delivery-reports у Slack: Щотижневий звіт по Мальті готовий, дивіться у Google Drive.»</p>
+            </div>
+        </section>
+
+        <!-- Section 5: Atlassian MCP -->
+        <section class="lesson">
+            <h2>🎫 Налаштування Atlassian (Jira + Confluence)</h2>
+
+            <p>Atlassian MCP дає доступ одразу до двох інструментів: <strong>Jira</strong> (тікети та задачі) і <strong>Confluence</strong> (документація та база знань).</p>
+
+            <h3>Конфігурація Atlassian MCP:</h3>
+            <pre><code>{
+  "mcpServers": {
+    "atlassian": {
+      "command": "npx",
+      "args": ["-y", "@anthropic/atlassian-mcp"],
+      "env": {
+        "ATLASSIAN_SITE": "your-company.atlassian.net",
+        "ATLASSIAN_USER": "your-email@company.com",
+        "ATLASSIAN_API_TOKEN": "your-api-token"
+      }
+    }
+  }
+}</code></pre>
+
+            <div class="info-box">
+                💡 API токен для Atlassian можна створити тут: <strong>id.atlassian.com → Security → API tokens → Create API token</strong>. Або попроси адміна допомогти.
+            </div>
+
+            <h3>Що можна робити після підключення:</h3>
+
+            <div class="example-box">
+                <div class="example-label">Пошук у Confluence</div>
+                <p>«Знайди в Confluence документацію про процес онбордингу нових партнерів»</p>
+            </div>
+
+            <div class="example-box">
+                <div class="example-label">Створення тікету в Jira</div>
+                <p>«Створи тікет в Jira: Підготувати QBR-звіт для партнера Burek. Пріоритет — High. Дедлайн — п'ятниця.»</p>
+            </div>
+
+            <div class="example-box">
+                <div class="example-label">Пошук тікетів</div>
+                <p>«Покажи всі мої відкриті тікети в Jira зі статусом In Progress»</p>
+            </div>
+        </section>
+
+        <!-- Section 6: Other MCPs -->
+        <section class="lesson">
+            <h2>🧩 Інші корисні MCP</h2>
+
+            <p>Екосистема MCP постійно зростає — з'являються нові плагіни. Ось кілька корисних:</p>
+
+            <h3>🌐 Firecrawl — читання вебсторінок</h3>
+            <p>Cursor сам по собі не може відкрити сайт і прочитати його вміст. Firecrawl MCP дає йому цю суперсилу. Просто скажи:</p>
+            <div class="example-box example-good">
+                <div class="example-label">Приклад з Firecrawl</div>
+                <p>«Відкрий сторінку https://food.bolt.eu/en-mt/i/burek і зроби короткий переказ, що це за ресторан»</p>
+            </div>
+
+            <h3>🗄️ Database MCP — підключення до баз даних</h3>
+            <p>Пряме підключення до баз даних (PostgreSQL, MySQL тощо) без написання скриптів. Зручно для швидких запитів.</p>
+
+            <h3>🔧 І багато іншого…</h3>
+            <p>Нові MCP з'являються регулярно. Головний принцип: якщо ти часто перемикаєшся між Cursor і якимось сервісом — перевір, може для нього вже є MCP.</p>
+
+            <div class="success-box">
+                ✅ MCP екосистема росте щодня. Перевіряй нові плагіни на <strong>mcp.so</strong> — це каталог усіх доступних MCP.
+            </div>
+        </section>
+
+        <!-- Section 7: Important notes -->
+        <section class="lesson">
+            <h2>⚠️ Важливі нюанси</h2>
+
+            <div class="warning-box">
+                🔐 <strong>Токени — це секрети.</strong> API-токени для Slack, Jira та інших сервісів — це як паролі. Ніколи не надсилай їх у чат, не публікуй у відкритих файлах, не діліся з колегами.
+            </div>
+
+            <div class="info-box">
+                🔄 <strong>MCP не працює?</strong> Перший крок — перезапусти Cursor (повністю закрий і відкрий). У 80% випадків це вирішує проблему. Якщо ні — перевір, чи правильний токен.
+            </div>
+
+            <div class="success-box">
+                🔌 <strong>Можна підключити кілька MCP одночасно.</strong> Наприклад, Slack + Jira + Firecrawl. Cursor буде сам розуміти, який MCP використати для твого запиту.
+            </div>
+
+            <h3>Типові помилки:</h3>
+            <div class="comparison">
+                <div class="comparison-bad">
+                    Надіслати токен колезі в Slack: «Ось мій SLACK_BOT_TOKEN: xoxb-123...»
+                </div>
+                <div class="comparison-good">
+                    Зберігати токени тільки в налаштуваннях Cursor на своєму комп'ютері
+                </div>
+            </div>
+
+            <div class="comparison">
+                <div class="comparison-bad">
+                    Панікувати, якщо MCP перестав працювати
+                </div>
+                <div class="comparison-good">
+                    Перезапустити Cursor, перевірити токен, попросити допомогу в адміна
+                </div>
+            </div>
+        </section>
+
+        <!-- Video placeholder -->
+        <section class="video-section">
+            <h2>🎬 Відео-демонстрація</h2>
+            <div class="video-placeholder">
+                <p>🎥 Тут буде відео з налаштуванням MCP крок за кроком</p>
+                <p>Скоро з'явиться!</p>
+            </div>
+        </section>
+
+        <!-- Quiz -->
+        <section class="quiz-section" id="quiz">
+            <h2>🧪 Перевір себе</h2>
+            <div id="quiz-container"></div>
+        </section>
+
+    </main>
+
+    <script src="../js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initQuiz(3, [
+                {
+                    type: "choice",
+                    question: "Що таке MCP простими словами?",
+                    options: [
+                        "Мова програмування",
+                        "Плагіни/розширення для Cursor, що підключають зовнішні сервіси",
+                        "Назва операційної системи",
+                        "Тип файлу"
+                    ],
+                    correct: 1,
+                    explanation: "MCP — це розетки на кухні 🔌 Підключаєш обладнання (Slack, Jira, Confluence) — і шеф-повар може ними користуватися прямо з Cursor!"
+                },
+                {
+                    type: "truefalse",
+                    statement: "Через MCP можна відправляти повідомлення в Slack прямо з Cursor, не відкриваючи Slack.",
+                    correct: true,
+                    explanation: "Саме так! Це як мати телефон прямо на кухні — не треба бігти в офіс, щоб зателефонувати."
+                },
+                {
+                    type: "match",
+                    question: "З'єднай MCP з кухонною аналогією:",
+                    pairs: [
+                        { left: "Slack MCP", right: "Міксер (комунікація)" },
+                        { left: "Jira MCP", right: "Духовка (задачі)" },
+                        { left: "Confluence MCP", right: "Блендер (документація)" },
+                        { left: "Firecrawl MCP", right: "Мікрохвильовка (веб)" }
+                    ]
+                },
+                {
+                    type: "choice",
+                    question: "Де налаштовуються MCP в Cursor?",
+                    options: [
+                        "В терміналі macOS",
+                        "В Google Drive",
+                        "Cursor Settings → MCP",
+                        "В App Store"
+                    ],
+                    correct: 2,
+                    explanation: "MCP налаштовується через Cursor Settings → MCP. Як підключення обладнання до розеток на кухні!"
+                }
+            ]);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модуль 6 — GitHub — автоматизація та публікація</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+</head>
+<body>
+
+    <!-- Name Input Overlay -->
+    <div id="name-overlay" class="name-overlay hidden">
+        <div class="name-card">
+            <h2>👋 Вітаємо на курсі!</h2>
+            <p>Введи своє ім'я, щоб ми могли відслідковувати твій прогрес</p>
+            <input type="text" class="name-input" placeholder="Твоє ім'я..." autofocus>
+            <button class="name-submit">Почати навчання →</button>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="module-nav">
+        <a href="../index.html" class="nav-home">← На головну</a>
+        <span class="nav-title">Модуль 6</span>
+        <a href="module-7.html" class="nav-next">Далі →</a>
+    </nav>
+
+    <!-- Header -->
+    <header class="module-header">
+        <div class="module-number">Модуль 6</div>
+        <h1>🐙 GitHub — автоматизація та публікація</h1>
+        <p class="module-desc">Як зберігати файли, публікувати звіти як вебсайти та автоматизувати рутину — без жодного рядка коду вручну</p>
+        <div class="module-meta">
+            <span>⏱ 20 хвилин</span>
+            <span>📝 5 питань</span>
+            <span>🎯 Для початківців</span>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="module-content">
+
+        <div class="kitchen-banner">
+            <div class="kitchen-banner-icon">📖</div>
+            <div class="kitchen-banner-text">
+                <strong>На нашій кухні це:</strong>
+                GitHub — це книга рецептів + вітрина ресторану. Зберігає всі рецепти (код), а вітрина (GitHub Pages) показує готові страви перехожим. GitHub Actions — це автоматична лінія, яка готує за розкладом без шеф-повара.
+            </div>
+        </div>
+
+        <!-- Section 1: What is GitHub -->
+        <section class="lesson">
+            <h2>🤔 Що таке GitHub?</h2>
+
+            <p>Ти знаєш Google Drive — хмарне сховище, куди можна закидати файли й ділитися ними з колегами. А тепер уяви, що Google Drive отримав <strong>суперсили</strong>:</p>
+
+            <div class="info-box">
+                💡 <strong>GitHub</strong> = Google Drive + повна історія змін + автоматичні задачі + безкоштовний хостинг вебсайтів. Все в одному!
+            </div>
+
+            <p>Головне, що потрібно зрозуміти: <strong>нам НЕ потрібно писати код, щоб використовувати GitHub</strong>. Cursor робить усе за нас. Ми лише говоримо, що хочемо, а він виконує.</p>
+
+            <h3>Три речі, для яких ми використовуємо GitHub:</h3>
+
+            <div class="step-by-step">
+                <div class="step">
+                    <div class="step-number">📁</div>
+                    <div class="step-content">
+                        <h3>Зберігання файлів та звітів</h3>
+                        <p>Усі наші скрипти, звіти та дані зберігаються на GitHub — надійно, з історією змін, доступно з будь-якого комп'ютера</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">🌐</div>
+                    <div class="step-content">
+                        <h3>Публікація звітів як вебсайтів</h3>
+                        <p>GitHub Pages перетворює твій HTML-звіт на справжній вебсайт з URL-адресою. Надіслав посилання партнеру — він бачить красивий звіт у браузері</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">🤖</div>
+                    <div class="step-content">
+                        <h3>Запуск автоматичних задач</h3>
+                        <p>GitHub Actions — це робот, який виконує завдання за розкладом. Наприклад, щопонеділка генерує свіжий звіт</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Key concepts -->
+        <section class="lesson">
+            <h2>📖 Ключові поняття (дуже просто!)</h2>
+
+            <p>Не лякайся термінів — зараз усе розкладемо по поличках. Уяви, що GitHub — це Google Drive на стероїдах:</p>
+
+            <h3>📂 Repository (репозиторій, або просто «репо»)</h3>
+            <p>Це <strong>папка проєкту</strong> на GitHub. Як папка в Google Drive — тільки з суперсилами. Один проєкт = один репозиторій.</p>
+            <div class="example-box">
+                <div class="example-label">Приклад</div>
+                <p>У тебе є папка «partner-reports» — це і є твій репозиторій. Там лежать звіти, скрипти, стилі.</p>
+            </div>
+
+            <h3>💾 Commit (коміт)</h3>
+            <p>Це <strong>збереження «знімку»</strong> всіх файлів у певний момент. Як натиснути <kbd>Cmd</kbd> + <kbd>S</kbd>, але з магією — GitHub запам'ятовує ВСІ попередні версії. Зламав щось? Завжди можна відкотитися назад.</p>
+            <div class="example-box">
+                <div class="example-label">Аналогія</div>
+                <p>Уяви, що ти робиш фото робочого столу кожного разу, як щось змінюєш. Потім можеш подивитися будь-яке попереднє фото і повернути все як було.</p>
+            </div>
+
+            <h3>⬆️ Push (пуш)</h3>
+            <p>Це <strong>завантаження змін на GitHub</strong>. Ти зробив коміт у себе на комп'ютері — а пуш відправляє його в хмару. Як синхронізація Google Drive.</p>
+
+            <h3>🌿 Branch (гілка)</h3>
+            <p>Це <strong>копія проєкту, де можна експериментувати</strong>, не ламаючи оригінал. Як чернетка документа — пишеш, тестуєш, а коли все ок — зливаєш із основним файлом.</p>
+
+            <h3>👑 Main / Master</h3>
+            <p>Це <strong>головна «офіційна» версія</strong> проєкту. Все, що тут — працює і перевірене. Гілки створюються саме від main.</p>
+
+            <div class="success-box">
+                ✅ <strong>Запам'ятай формулу:</strong> Зробив зміни → Commit (зберіг знімок) → Push (відправив у хмару). Три кроки — і все на GitHub!
+            </div>
+        </section>
+
+        <!-- Section 3: Initial setup -->
+        <section class="lesson">
+            <h2>🔧 Початкове налаштування (крок за кроком)</h2>
+
+            <p>Щоб почати працювати з GitHub, потрібно зробити налаштування один раз. Після цього все працюватиме автоматично.</p>
+
+            <div class="step-by-step">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Створи акаунт на GitHub</h3>
+                        <p>Зайди на <strong>github.com</strong> і зареєструйся. Це безкоштовно. Запам'ятай свій логін — він буде частиною URL твоїх сайтів.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Встанови GitHub CLI</h3>
+                        <p>GitHub CLI (gh) — це інструмент для роботи з GitHub через термінал. Cursor може встановити його за тебе! Просто напиши в чат:</p>
+                        <pre><code>Встанови GitHub CLI (gh) на мій Mac</code></pre>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Авторизуйся в GitHub</h3>
+                        <p>Попроси Cursor:</p>
+                        <pre><code>Авторизуй мене в GitHub через gh auth login</code></pre>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Підтверди в браузері</h3>
+                        <p>Cursor покаже тобі <strong>код</strong> і <strong>посилання</strong>. Відкрий посилання в браузері, введи код — готово! Тепер Cursor має доступ до твого GitHub.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                💡 <strong>Це потрібно зробити лише один раз!</strong> Після налаштування Cursor пам'ятатиме твій акаунт і працюватиме з GitHub автоматично.
+            </div>
+        </section>
+
+        <!-- Section 4: GitHub Pages -->
+        <section class="lesson">
+            <h2>🌐 GitHub Pages — твій безкоштовний вебсайт</h2>
+
+            <p>Це одна з найкрутіших фішок GitHub. Уяви: ти створив HTML-звіт у Cursor — і хочеш, щоб партнер побачив його <strong>у браузері за посиланням</strong>, без скачування файлів. GitHub Pages робить саме це!</p>
+
+            <div class="info-box">
+                💡 <strong>GitHub Pages</strong> — це безкоштовний хостинг від GitHub. Він бере твої HTML-файли і перетворює їх на справжній вебсайт з адресою типу <strong>https://твій-логін.github.io/назва-репо/</strong>
+            </div>
+
+            <h3>Чому це класно:</h3>
+            <p>✨ <strong>Безкоштовно</strong> — ніяких платних хостингів</p>
+            <p>✨ <strong>Автоматично</strong> — пушнув зміни → сайт оновився</p>
+            <p>✨ <strong>Публічне посилання</strong> — надіслав URL партнеру, він відкрив і бачить звіт</p>
+            <p>✨ <strong>Красиво</strong> — повноцінний вебсайт з графіками, таблицями, брендингом</p>
+
+            <h3>Як налаштувати (крок за кроком):</h3>
+
+            <div class="step-by-step">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Попроси Cursor створити репозиторій</h3>
+                        <p>Напиши в чат:</p>
+                        <pre><code>Створи новий GitHub репозиторій partner-reports з GitHub Pages</code></pre>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Cursor все налаштує</h3>
+                        <p>Він створить репозиторій на GitHub, увімкне Pages і підготує структуру папок. Тобі нічого не потрібно робити!</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Твій сайт готовий!</h3>
+                        <p>Звіти тепер доступні за адресою:<br><strong>https://твій-логін.github.io/partner-reports/</strong></p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Оновлення — автоматичні</h3>
+                        <p>Кожного разу, коли ти робиш push — сайт автоматично оновлюється. Партнер бачить завжди свіжу версію за тим самим посиланням!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="success-box">
+                ✅ <strong>Підсумок:</strong> Ти більше не надсилаєш файли поштою. Просто даєш посилання — і партнер бачить завжди актуальний звіт у браузері. Професійно і зручно!
+            </div>
+        </section>
+
+        <!-- Section 5: GitHub Actions intro -->
+        <section class="lesson">
+            <h2>🤖 GitHub Actions — автоматичні задачі</h2>
+
+            <p>А тепер уяви таку ситуацію:</p>
+
+            <div class="example-box">
+                <div class="example-label">Сценарій</div>
+                <p>Кожного понеділка о 13:00 тобі потрібно: зайти в Databricks, витягти свіжі дані, згенерувати звіт, опублікувати його на сайті. Це займає 30 хвилин ручної роботи.</p>
+            </div>
+
+            <p>А тепер уяви, що ти <strong>наймаєш робота</strong>, який робить усе це за тебе. Щопонеділка о 13:00 він запускається, виконує всі кроки і публікує звіт — а ти в цей час п'єш каву ☕</p>
+
+            <p>Це і є <strong>GitHub Actions</strong> — автоматичні процеси (workflows), які запускаються за розкладом або за подією.</p>
+
+            <h3>Що ми автоматизуємо:</h3>
+
+            <div class="step-by-step">
+                <div class="step">
+                    <div class="step-number">📊</div>
+                    <div class="step-content">
+                        <h3>Автогенерація звітів щотижня</h3>
+                        <p>Скрипт запускається за розкладом, збирає дані, генерує HTML-звіт</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">🗄️</div>
+                    <div class="step-content">
+                        <h3>Автоматичне витягування даних з Databricks</h3>
+                        <p>Підключається до бази, виконує SQL-запити, отримує свіжі цифри</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">🌐</div>
+                    <div class="step-content">
+                        <h3>Оновлення GitHub Pages</h3>
+                        <p>Після генерації звіту — автоматично пушить його на сайт. Партнер бачить свіжий звіт без твоєї участі</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: How GitHub Actions work -->
+        <section class="lesson">
+            <h2>⚙️ Як працюють GitHub Actions (спрощено)</h2>
+
+            <p>Кожна автоматична задача описується у спеціальному файлі — YAML-файлі (це як рецепт для робота). Цей файл лежить у папці <code>.github/workflows/</code>.</p>
+
+            <div class="warning-box">
+                ⚠️ <strong>Але!</strong> Тобі НЕ потрібно писати цей файл самостійно. Cursor зробить це за тебе! Просто опиши, що хочеш автоматизувати.
+            </div>
+
+            <div class="example-box example-good">
+                <div class="example-label">Приклад промпту для Cursor</div>
+                <pre><code>Створи GitHub Action, яка кожного понеділка о 13:00
+запускає скрипт generate_report.py
+і пушить результат на GitHub Pages</code></pre>
+            </div>
+
+            <p>Cursor створить workflow-файл, який містить три ключові частини:</p>
+
+            <div class="step-by-step">
+                <div class="step">
+                    <div class="step-number">⏰</div>
+                    <div class="step-content">
+                        <h3>КОЛИ запускати (schedule)</h3>
+                        <p>Кожного понеділка о 13:00 — або за іншим розкладом, який ти вкажеш</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">📋</div>
+                    <div class="step-content">
+                        <h3>ЩО робити (steps)</h3>
+                        <p>Встановити залежності → Запустити скрипт → Зібрати результат → Запушити на GitHub Pages</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">☁️</div>
+                    <div class="step-content">
+                        <h3>ДЕ виконувати</h3>
+                        <p>На серверах GitHub! Не на твоєму комп'ютері. Ти можеш навіть не вмикати ноутбук — робот працює в хмарі</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-box">
+                💡 <strong>Аналогія:</strong> GitHub Actions — це як замовити доставку їжі через додаток. Ти один раз кажеш «кожного понеділка привози мені піцу о 13:00» — і далі вона приїжджає автоматично. Тобі не потрібно розуміти, як працює кухня чи логістика.
+            </div>
+        </section>
+
+        <!-- Section 7: Full workflow -->
+        <section class="lesson">
+            <h2>🔄 Повний робочий процес</h2>
+
+            <p>Давай подивимось, як усі частини складаються в одну систему:</p>
+
+            <div class="step-by-step">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Databricks</h3>
+                        <p>Тут живуть наші дані — замовлення, партнери, метрики</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Скрипт (Python)</h3>
+                        <p>Cursor написав скрипт, який підключається до Databricks, витягує дані й генерує HTML-звіт</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>GitHub</h3>
+                        <p>Скрипт і звіт зберігаються в репозиторії на GitHub</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>GitHub Pages</h3>
+                        <p>HTML-звіт автоматично стає вебсайтом з публічним URL</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>GitHub Actions</h3>
+                        <p>Кожного тижня робот запускає скрипт → генерує новий звіт → публікує на Pages</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comparison">
+                <div class="comparison-bad">
+                    <p><strong>❌ Без автоматизації:</strong></p>
+                    <p>Кожного понеділка вручну: відкрий Databricks → напиши запит → скопіюй дані → зроби звіт → відправ партнеру → повтори 10 разів для різних партнерів</p>
+                </div>
+                <div class="comparison-good">
+                    <p><strong>✅ З GitHub + Actions:</strong></p>
+                    <p>Один раз налаштував → далі робот щотижня генерує звіти → партнери бачать свіжі дані за постійним посиланням → ти п'єш каву ☕</p>
+                </div>
+            </div>
+
+            <div class="success-box">
+                ✅ <strong>Формула успіху:</strong> Databricks (дані) → Скрипт (обробка) → GitHub (сховище) → Pages (публікація) → Actions (автоматизація) → ☕ (ти відпочиваєш)
+            </div>
+        </section>
+
+        <!-- Video section -->
+        <section class="video-section">
+            <h2>🎬 Відео-демонстрація</h2>
+            <div class="video-placeholder">
+                <p>🎥 Відео буде додано найближчим часом</p>
+                <p>Тут буде демонстрація створення репозиторію, налаштування GitHub Pages та запуску GitHub Actions</p>
+            </div>
+        </section>
+
+        <!-- Quiz -->
+        <section class="quiz-section" id="quiz">
+            <h2>📝 Перевір себе</h2>
+            <div id="quiz-container"></div>
+        </section>
+
+    </main>
+
+    <script src="../js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initQuiz(6, [
+        {
+            type: "match",
+            question: "З'єднай Git-поняття з простим поясненням:",
+            pairs: [
+                { left: "Repository", right: "Папка проєкту" },
+                { left: "Commit", right: "Збереження версії" },
+                { left: "Push", right: "Вивантаження на GitHub" },
+                { left: "Branch", right: "Копія для експериментів" }
+            ]
+        },
+        {
+            type: "truefalse",
+            statement: "GitHub Pages дозволяє безкоштовно опублікувати HTML-звіт як сайт з постійним посиланням.",
+            correct: true,
+            explanation: "Так! GitHub Pages — це вітрина вашого ресторану 📖 Кожна страва (звіт) отримує своє постійне посилання, яке можна надіслати будь-кому."
+        },
+        {
+            type: "choice",
+            question: "Що робить GitHub Actions?",
+            options: [
+                "Створює красиві презентації",
+                "Автоматично виконує задані задачі за розкладом (наприклад, щопонеділка генерує звіт)",
+                "Замінює Google Drive",
+                "Блокує небажані сайти"
+            ],
+            correct: 1,
+            explanation: "GitHub Actions — це автоматична лінія на кухні 🤖 Робот, який щопонеділка сам готує страву за рецептом — поки ви п'єте каву!"
+        },
+        {
+            type: "choice",
+            question: "Який правильний порядок автоматизованого процесу?",
+            options: [
+                "GitHub → Databricks → HTML → Looker",
+                "Databricks → Cursor/Script → HTML → GitHub Pages → Looker",
+                "Looker → GitHub → Databricks → HTML",
+                "HTML → Databricks → GitHub → Cursor"
+            ],
+            correct: 1,
+            explanation: "Правильний flow: Склад (Databricks) → Кухня (Cursor) → Страва (HTML) → Вітрина (GitHub Pages) → Офіціант (Looker)."
+        },
+        {
+            type: "truefalse",
+            statement: "Щоб користуватися GitHub, потрібно бути програмістом і вміти писати код.",
+            correct: false,
+            explanation: "Ні! Cursor робить всю технічну роботу за вас. Ви тільки кажете шеф-повару що потрібно — він сам готує, пакує і виставляє у вітрину."
+        }
+    ]);
+        });
+    </script>
+</body>
+</html>

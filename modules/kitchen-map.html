@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍳 Карта ресторану | Cursor Course</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍳</text></svg>">
+    <style>
+        .kitchen-hero {
+            text-align: center;
+            padding: 60px 32px 40px;
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 30%, #fbbf24 100%);
+        }
+        .kitchen-hero h1 { font-size: clamp(28px, 5vw, 44px); margin-bottom: 12px; }
+        .kitchen-hero p { font-size: 19px; color: #92400e; max-width: 600px; margin: 0 auto; }
+
+        .kitchen-story {
+            max-width: 780px; margin: 0 auto; padding: 48px 24px 20px;
+        }
+        .kitchen-story > p {
+            font-size: 19px; line-height: 1.8; color: var(--text); margin-bottom: 24px;
+        }
+
+        .kitchen-grid {
+            max-width: 820px; margin: 0 auto; padding: 0 24px 60px;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+        }
+        @media (max-width: 640px) { .kitchen-grid { grid-template-columns: 1fr; } }
+
+        .kitchen-card {
+            background: var(--card-bg);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .kitchen-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+            border-color: var(--primary-light);
+        }
+        .kitchen-card-emoji {
+            font-size: 48px;
+            margin-bottom: 12px;
+            display: block;
+        }
+        .kitchen-card-tool {
+            font-size: 12px; font-weight: 700; text-transform: uppercase;
+            letter-spacing: 1px; color: var(--primary); margin-bottom: 4px;
+        }
+        .kitchen-card-name {
+            font-size: 20px; font-weight: 800; margin-bottom: 8px;
+        }
+        .kitchen-card-desc {
+            font-size: 15px; color: var(--text-secondary); line-height: 1.6;
+        }
+        .kitchen-card-module {
+            display: inline-block; margin-top: 12px;
+            font-size: 13px; font-weight: 600; color: var(--primary);
+            background: var(--primary-bg); padding: 4px 12px; border-radius: 20px;
+            text-decoration: none;
+        }
+        .kitchen-card-module:hover { background: #ddd6fe; }
+
+        .kitchen-flow {
+            max-width: 780px; margin: 0 auto; padding: 40px 24px 60px;
+        }
+        .kitchen-flow h2 { text-align: center; font-size: 28px; margin-bottom: 32px; }
+
+        .flow-step {
+            display: flex; align-items: flex-start; gap: 20px;
+            padding: 20px 0; position: relative;
+        }
+        .flow-step:not(:last-child)::after {
+            content: ''; position: absolute; left: 27px; top: 64px; bottom: 0;
+            width: 3px; background: linear-gradient(to bottom, var(--primary), var(--primary-light));
+        }
+        .flow-icon {
+            flex-shrink: 0; width: 56px; height: 56px;
+            background: var(--primary-bg); border: 3px solid var(--primary);
+            border-radius: 50%; display: flex; align-items: center;
+            justify-content: center; font-size: 26px; z-index: 1;
+        }
+        .flow-text h3 { font-size: 18px; margin-bottom: 4px; }
+        .flow-text p { color: var(--text-secondary); font-size: 15px; margin: 0; }
+
+        .kitchen-cta {
+            text-align: center; padding: 48px 24px 80px;
+        }
+        .kitchen-cta a {
+            display: inline-block; padding: 16px 40px;
+            background: var(--primary); color: white; text-decoration: none;
+            border-radius: 12px; font-size: 18px; font-weight: 700;
+            transition: all 0.2s;
+        }
+        .kitchen-cta a:hover {
+            background: var(--primary-dark); transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(124,58,237,0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="module-nav">
+        <a href="../index.html" class="nav-home">← На головну</a>
+        <span class="nav-title">Вступ</span>
+        <a href="module-0.html" class="nav-next">Модуль 0 →</a>
+    </nav>
+
+    <header class="kitchen-hero">
+        <h1>🍳 Ласкаво просимо на кухню!</h1>
+        <p>Перш ніж починати навчання, давай розберемось як влаштований наш "ресторан". Ця аналогія допоможе зрозуміти ВСЕ.</p>
+    </header>
+
+    <section class="kitchen-story">
+        <p>
+            Уявіть, що ви — <strong>власник ресторану</strong>. У вас є кухня, склад з продуктами, шеф-повар, офіціанти, обладнання. Ваша задача — готувати смачні страви (звіти, аналітику) для гостей (партнерів, колег, керівництва).
+        </p>
+        <p>
+            Тепер замініть кожен елемент ресторану на наш реальний інструмент — і ви зрозумієте, як все працює разом. 👇
+        </p>
+    </section>
+
+    <section class="kitchen-grid">
+
+        <div class="kitchen-card">
+            <span class="kitchen-card-emoji">🏪</span>
+            <div class="kitchen-card-tool">Cursor</div>
+            <div class="kitchen-card-name">Ресторан</div>
+            <div class="kitchen-card-desc">Вся операція в одному місці. Кухня, зал, склад, каса — все тут. Ви відкриваєте Cursor і маєте доступ до всього.</div>
+            <a href="module-0.html" class="kitchen-card-module">→ Модуль 0</a>
+        </div>
+
+        <div class="kitchen-card">
+            <span class="kitchen-card-emoji">🧊</span>
+            <div class="kitchen-card-tool">Google Drive Desktop</div>
+            <div class="kitchen-card-name">Холодильник</div>
+            <div class="kitchen-card-desc">Оптовий склад далеко, а холодильник — прямо на кухні. Все автоматично поповнюється, а шеф бере інгредієнти під рукою.</div>
+            <a href="module-1.html" class="kitchen-card-module">→ Модуль 1</a>
+        </div>
+
+        <div class="kitchen-card">
+            <span class="kitchen-card-emoji">👨‍🍳</span>
+            <div class="kitchen-card-tool">Промти / AI Chat</div>
+            <div class="kitchen-card-name">Замовлення шеф-повару</div>
+            <div class="kitchen-card-desc">Ви кажете що приготувати — він готує. Чим точніше замовлення (промт), тим смачніша страва (результат).</div>
+            <a href="module-2.html" class="kitchen-card-module">→ Модуль 2</a>
+        </div>
+
+        <div class="kitchen-card">
+            <span class="kitchen-card-emoji">🔌</span>
+            <div class="kitchen-card-tool">MCP</div>
+            <div class="kitchen-card-name">Кухонне обладнання</div>
+            <div class="kitchen-card-desc">Міксер = Slack, духовка = Jira, блендер = Confluence. Підключаєш в розетку — і шеф-повар може ними користуватися.</div>
+            <a href="module-3.html" class="kitchen-card-module">→ Модуль 3</a>
+        </div>
+
+        <div class="kitchen-card">
+            <span class="kitchen-card-emoji">🏭</span>
+            <div class="kitchen-card-tool">Databricks</div>
+            <div class="kitchen-card-name">Оптовий склад</div>
+            <div class="kitchen-card-desc">ВЕЛИЧЕЗНИЙ склад з усіма продуктами компанії. Мільйони позицій. Шеф знає, як знайти потрібне та замовити доставку.</div>
+            <a href="module-4.html" class="kitchen-card-module">→ Модуль 4</a>
+        </div>
+
+        <div class="kitchen-card">
+            <span class="kitchen-card-emoji">🍽️</span>
+            <div class="kitchen-card-tool">HTML-звіти + Looker</div>
+            <div class="kitchen-card-name">Готові страви + Офіціант</div>
+            <div class="kitchen-card-desc">Красиво сервіровані страви (звіти), а офіціант (Looker) доставляє їх гостям за розкладом.</div>
+            <a href="module-5.html" class="kitchen-card-module">→ Модуль 5</a>
+        </div>
+
+        <div class="kitchen-card">
+            <span class="kitchen-card-emoji">📖</span>
+            <div class="kitchen-card-tool">GitHub</div>
+            <div class="kitchen-card-name">Книга рецептів + Вітрина</div>
+            <div class="kitchen-card-desc">Зберігає всі рецепти (код). Вітрина (Pages) показує страви перехожим. Робот (Actions) готує за розкладом.</div>
+            <a href="module-6.html" class="kitchen-card-module">→ Модуль 6</a>
+        </div>
+
+        <div class="kitchen-card">
+            <span class="kitchen-card-emoji">💡</span>
+            <div class="kitchen-card-tool">Лайфхаки</div>
+            <div class="kitchen-card-name">Секрети шеф-повара</div>
+            <div class="kitchen-card-desc">Як правильно тримати ніж, які спеції додавати першими, і як врятувати страву, якщо щось пішло не так.</div>
+            <a href="module-7.html" class="kitchen-card-module">→ Модуль 7</a>
+        </div>
+
+    </section>
+
+    <section class="kitchen-flow">
+        <h2>🔄 Як готується одна "страва"</h2>
+
+        <div class="flow-step">
+            <div class="flow-icon">1️⃣</div>
+            <div class="flow-text">
+                <h3>Відкриваєте кухню</h3>
+                <p>Запускаєте Cursor і відкриваєте папку з проєктом (холодильник вже підключений через Google Drive)</p>
+            </div>
+        </div>
+
+        <div class="flow-step">
+            <div class="flow-icon">2️⃣</div>
+            <div class="flow-text">
+                <h3>Замовляєте продукти зі складу</h3>
+                <p>Пишете промт з "dbx" — шеф-повар йде на склад (Databricks) і приносить потрібні інгредієнти (дані)</p>
+            </div>
+        </div>
+
+        <div class="flow-step">
+            <div class="flow-icon">3️⃣</div>
+            <div class="flow-text">
+                <h3>Даєте замовлення шеф-повару</h3>
+                <p>Пишете детальний промт: що приготувати, як подати, для кого. Шеф використовує обладнання (MCP).</p>
+            </div>
+        </div>
+
+        <div class="flow-step">
+            <div class="flow-icon">4️⃣</div>
+            <div class="flow-text">
+                <h3>Страва готова!</h3>
+                <p>Cursor створив HTML-звіт — красиво сервірований, з графіками та таблицями</p>
+            </div>
+        </div>
+
+        <div class="flow-step">
+            <div class="flow-icon">5️⃣</div>
+            <div class="flow-text">
+                <h3>Виставляєте у вітрину</h3>
+                <p>Пушите на GitHub Pages — тепер звіт доступний за посиланням для всіх</p>
+            </div>
+        </div>
+
+        <div class="flow-step">
+            <div class="flow-icon">6️⃣</div>
+            <div class="flow-text">
+                <h3>Офіціант розносить</h3>
+                <p>Looker Schedule автоматично надсилає звіт потрібним людям. А GitHub Actions повторює це щотижня!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="kitchen-cta">
+        <p style="font-size: 20px; margin-bottom: 24px; color: var(--text-secondary);">Тепер, коли ви знаєте як влаштована наша кухня — час вчитися готувати! 🧑‍🍳</p>
+        <a href="module-0.html">Почати з Модуля 0 →</a>
+    </section>
+
+    <footer class="course-footer">
+        <p>Cursor AI Course · Створено з ❤️ за допомогою Cursor</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модуль 5 — HTML-звіти та Looker автоматизація | Cursor AI Course</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+</head>
+<body>
+
+    <!-- Name Input Overlay -->
+    <div id="name-overlay" class="name-overlay hidden">
+        <div class="name-card">
+            <h2>👋 Вітаємо на курсі!</h2>
+            <p>Введи своє ім'я, щоб ми могли відслідковувати твій прогрес</p>
+            <input type="text" class="name-input" placeholder="Твоє ім'я..." autofocus>
+            <button class="name-submit">Почати навчання →</button>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="module-nav">
+        <a href="module-4.html" class="nav-home">← Модуль 4</a>
+        <span class="nav-title">Модуль 5</span>
+        <a href="module-6.html" class="nav-next">Модуль 6 →</a>
+    </nav>
+
+    <!-- Header -->
+    <header class="module-header">
+        <div class="module-number">Модуль 5</div>
+        <h1>📊 HTML-звіти та Looker автоматизація</h1>
+        <p class="module-desc">Створення професійних звітів через Cursor, автоматична розсилка через Looker</p>
+        <div class="module-meta">
+            <span>⏱ 25 хвилин</span>
+            <span>📝 4 питання у квізі</span>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="module-content">
+
+        <div class="kitchen-banner">
+            <div class="kitchen-banner-icon">🍽️</div>
+            <div class="kitchen-banner-text">
+                <strong>На нашій кухні це:</strong>
+                HTML-звіти — це готові страви, красиво сервіровані на тарілці. А Looker Schedule — це офіціант з розкладом 🛎️, який щопонеділка о 10:00 автоматично несе страву на потрібний стіл.
+            </div>
+        </div>
+
+        <!-- Section 1 -->
+        <section class="lesson">
+            <h2>1. 🤔 Навіщо HTML-звіти?</h2>
+
+            <p>Уяви: тобі потрібно відправити звіт партнеру-ресторану. У тебе є два варіанти:</p>
+
+            <div class="comparison">
+                <div class="comparison-bad">
+                    <p>Скріншот Excel-таблиці в email</p>
+                    <p><small>Розмитий, некрасивий, не масштабується на телефоні. Виглядає як домашнє завдання.</small></p>
+                </div>
+                <div class="comparison-good">
+                    <p>Професійна веб-сторінка з графіками та таблицями</p>
+                    <p><small>Красива, адаптивна, з інтерактивними елементами. Виглядає як продукт топ-компанії.</small></p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                💡 <strong>Аналогія:</strong> HTML-звіт — це як красива вітрина магазину. Excel-скріншот — це як записка на салфетці. Обидва передають інформацію, але враження зовсім різне!
+            </div>
+
+            <p>HTML-звіти — це по суті <strong>веб-сторінки</strong> з твоїми даними. Вони:</p>
+            <ul>
+                <li>🎨 Виглядають професійно (графіки, таблиці, KPI-картки)</li>
+                <li>📱 Працюють на будь-якому пристрої (комп'ютер, телефон, планшет)</li>
+                <li>🔄 Можуть автоматично оновлюватися</li>
+                <li>📧 Легко вбудовуються в email</li>
+            </ul>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="lesson">
+            <h2>2. 🛠️ Як Cursor створює HTML-звіти</h2>
+
+            <p>Процес дуже простий: ти <strong>описуєш</strong>, що хочеш побачити — а Cursor створює готовий HTML-файл. Магія!</p>
+
+            <div class="step-by-step">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Ти описуєш бажаний звіт</h3>
+                        <p>Чим детальніше — тим краще результат. Вкажи дані, структуру, стиль.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Cursor генерує HTML-файл</h3>
+                        <p>Він сам напише весь код — HTML, CSS, JavaScript — і створить файл у твоїй папці.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Ти відкриваєш і перевіряєш</h3>
+                        <p>Відкриваєш файл у браузері, перевіряєш, просиш Cursor поправити, якщо щось не так.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p><strong>Ключовий принцип: </strong> будь ДУЖЕ конкретним у промті. Cursor — геніальний виконавець, але він не вміє читати думки.</p>
+
+            <div class="example-box example-good">
+                <div class="example-label">Приклад хорошого промта для звіту</div>
+                <p><em>«Створи HTML-звіт для партнера Burek. Дані в файлі @data.csv. Звіт має містити: заголовок з логотипом, таблицю з тижневими метриками (замовлення, GMV, середній чек), графік тренду замовлень за 8 тижнів. Дизайн: сучасний, темна тема, акцентний колір #34D186.»</em></p>
+            </div>
+
+            <div class="comparison">
+                <div class="comparison-bad">
+                    <p>«Зроби звіт по Burek»</p>
+                    <p><small>Занадто розмито — Cursor не знає, які дані, який формат, який стиль.</small></p>
+                </div>
+                <div class="comparison-good">
+                    <p>«Створи HTML-звіт для партнера Burek з тижневими метриками замовлень, GMV та середнього чеку за 8 тижнів. Дані в @burek_data.csv. Темна тема, колір #34D186.»</p>
+                    <p><small>Конкретно: що, звідки, як виглядає.</small></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="lesson">
+            <h2>3. 📝 Структура ідеального промта для звіту</h2>
+
+            <p>Щоб отримати звіт мрії з першої спроби, включи в промт ці 5 компонентів:</p>
+
+            <div class="step-by-step">
+                <div class="step">
+                    <div class="step-number">📂</div>
+                    <div class="step-content">
+                        <h3>Джерело даних</h3>
+                        <p>Звідки брати дані? Файл (<code>@data.csv</code>)? Запит до Databricks (<code>dbx</code>)? Або дані вже в тексті промта?</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">📋</div>
+                    <div class="step-content">
+                        <h3>Структура (Layout)</h3>
+                        <p>Які секції має містити звіт? Заголовок, KPI-картки, таблиця, графік, футер? В якому порядку?</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">📊</div>
+                    <div class="step-content">
+                        <h3>Візуалізація</h3>
+                        <p>Які графіки потрібні? Лінійний тренд? Стовпчиковий? Кругова діаграма? Таблиця з підсвіткою?</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">🎨</div>
+                    <div class="step-content">
+                        <h3>Стиль</h3>
+                        <p>Кольори, шрифти, світла чи темна тема? Мінімалістичний чи насичений дизайн?</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">🏢</div>
+                    <div class="step-content">
+                        <h3>Брендинг</h3>
+                        <p>Логотип Bolt? Кольори партнера? Bolt зелений (#34D186)? Назва партнера у заголовку?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-box example-good">
+                <div class="example-label">Повний промт-шаблон</div>
+                <p><em>«Створи HTML-звіт [для кого]. Дані: [джерело]. Секції: [перелік]. Графіки: [типи]. Стиль: [тема, кольори]. Брендинг: [логотип, назва].»</em></p>
+            </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="lesson">
+            <h2>4. 💡 Поради для кращих звітів</h2>
+
+            <div class="success-box">
+                ✅ <strong>Завжди переглядай звіт у браузері перед відправкою.</strong> Клікни правою кнопкою на файл у Cursor → «Open with Live Server», або просто відкрий HTML-файл у Chrome/Safari. Те, що добре виглядає в коді, може виглядати інакше в браузері.
+            </div>
+
+            <div class="info-box">
+                💡 <strong>Адаптивний дизайн:</strong> Попроси Cursor зробити звіт «responsive» — тоді він буде гарно виглядати і на телефоні, і на комп'ютері. Просто додай у промт: «Зроби дизайн адаптивним для мобільних пристроїв».
+            </div>
+
+            <div class="info-box">
+                💡 <strong>Контекст у заголовку:</strong> Завжди додавай дати та контекст у заголовок звіту. Не «Звіт Burek», а «Burek — Тижневий звіт: 24–30 березня 2026». Через місяць ніхто не згадає, за який період цей звіт.
+            </div>
+
+            <div class="info-box">
+                💡 <strong>Інтерактивність:</strong> Попроси Cursor додати hover-ефекти на таблиці — при наведенні мишкою рядок підсвічується. Це виглядає професійно і допомагає читати дані. Просто напиши: «Додай hover-ефект на рядки таблиці».
+            </div>
+
+            <div class="warning-box">
+                ⚠️ <strong>Перевіряй числа!</strong> Cursor може красиво оформити дані, але завжди звіряй ключові цифри з оригінальним джерелом. Краще витратити 2 хвилини на перевірку, ніж відправити партнеру неправильний звіт.
+            </div>
+        </section>
+
+        <!-- Section 5 -->
+        <section class="lesson">
+            <h2>5. 📬 Що таке Looker Schedule?</h2>
+
+            <p><strong>Looker</strong> — це наш інструмент для візуалізації даних у Bolt. Думай про нього як про «красивий дашборд», де можна дивитися на графіки та таблиці з даними компанії.</p>
+
+            <div class="info-box">
+                💡 <strong>Аналогія:</strong> Looker Schedule — це як «автовідповідач» для звітів. Ти один раз налаштовуєш: «Кожен понеділок о 10:00 відправляй цей звіт на email партнера» — і далі все відбувається автоматично. Не потрібно щотижня руками відправляти!
+            </div>
+
+            <p>Looker Schedule дозволяє:</p>
+            <ul>
+                <li>📧 Автоматично відправляти звіти на email</li>
+                <li>⏰ Налаштувати розклад (щодня, щотижня, щомісяця)</li>
+                <li>👥 Відправляти декільком отримувачам одночасно</li>
+                <li>📄 Обирати формат (HTML, PDF, CSV)</li>
+            </ul>
+        </section>
+
+        <!-- Section 6 -->
+        <section class="lesson">
+            <h2>6. ⚙️ Як налаштувати Looker Schedule (крок за кроком)</h2>
+
+            <div class="step-by-step">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Створи або відкрий дашборд</h3>
+                        <p>Зайди в Looker і відкрий дашборд або звіт, який хочеш відправляти автоматично.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Натисни іконку шестерні ⚙️ → «Schedule»</h3>
+                        <p>У правому верхньому куті дашборда знайди іконку налаштувань і обери «Schedule delivery».</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Вкажи отримувачів</h3>
+                        <p>Введи email-адреси тих, кому потрібно відправляти звіт. Можна додати кілька адрес через кому.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Налаштуй частоту</h3>
+                        <p>Обери, як часто відправляти: щодня, щотижня (обери день), щомісяця. Встанови час відправки.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Обери формат</h3>
+                        <p>Рекомендуємо <strong>«HTML inline»</strong> — звіт вбудовується прямо в email, і отримувач бачить його без завантаження файлу. Для скачування обери PDF або CSV.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>Збережи</h3>
+                        <p>Натисни «Save». Готово! Тепер звіт відправлятиметься автоматично за розкладом. 🎉</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="success-box">
+                ✅ <strong>Порада:</strong> Після налаштування натисни «Send test» — Looker надішле тестовий лист, і ти зможеш перевірити, як усе виглядає, перш ніж партнер отримає перший лист.
+            </div>
+        </section>
+
+        <!-- Section 7 -->
+        <section class="lesson">
+            <h2>7. 🔄 Поєднуємо Cursor + Looker</h2>
+
+            <p>Найпотужніший підхід — використовувати <strong>обидва інструменти разом</strong>. Ось як виглядає повний робочий процес:</p>
+
+            <div class="step-by-step">
+                <div class="step">
+                    <div class="step-number">🤖</div>
+                    <div class="step-content">
+                        <h3>Cursor створює</h3>
+                        <p>Ти просиш Cursor витягнути дані з Databricks (dbx) і створити красивий HTML-звіт.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">🌐</div>
+                    <div class="step-content">
+                        <h3>GitHub хостить</h3>
+                        <p>Завантажуєш звіт на GitHub Pages (наступний модуль!) — і він доступний по посиланню 24/7.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">📬</div>
+                    <div class="step-content">
+                        <h3>Looker доставляє</h3>
+                        <p>Налаштовуєш Looker Schedule або вбудовуєш звіт у дашборд — і партнери отримують все автоматично.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-box example-good">
+                <div class="example-label">Приклад повного workflow</div>
+                <ol>
+                    <li>Понеділок: дані за тиждень з'являються в Databricks</li>
+                    <li>Ти пишеш промт: <em>«dbx — витягни тижневі метрики Burek і створи HTML-звіт»</em></li>
+                    <li>Cursor витягує дані і створює звіт</li>
+                    <li>Ти перевіряєш звіт у браузері, коригуєш якщо потрібно</li>
+                    <li>Завантажуєш на GitHub Pages</li>
+                    <li>Відправляєш посилання партнеру або налаштовуєш автоматичну розсилку</li>
+                </ol>
+            </div>
+
+            <div class="info-box">
+                💡 <strong>Мрія автоматизатора:</strong> В ідеалі цей процес можна повністю автоматизувати через GitHub Actions (Модуль 6). Тоді звіт оновлюватиметься сам, без будь-яких дій з твого боку!
+            </div>
+        </section>
+
+        <!-- Quiz -->
+        <section class="quiz-section" id="quiz">
+            <h2>🧠 Перевір себе</h2>
+            <div id="quiz-container"></div>
+        </section>
+
+    </main>
+
+    <script src="../js/app.js"></script>
+    <script>
+    initQuiz(5, [
+        {
+            type: "choice",
+            question: "Що потрібно вказати в промті для створення HTML-звіту?",
+            options: [
+                "Тільки назву файлу",
+                "Джерело даних, структуру, візуалізації, стиль, брендинг",
+                "Тільки 'зроби звіт'",
+                "Пароль від Databricks"
+            ],
+            correct: 1,
+            explanation: "Хороший промт для звіту — як детальне замовлення страви 🍽️ Інгредієнти (дані), рецепт (структура), подача (дизайн), для кого (брендинг)."
+        },
+        {
+            type: "truefalse",
+            statement: "Looker Schedule може автоматично надсилати звіти на email щотижня без вашої участі.",
+            correct: true,
+            explanation: "Саме так! Looker Schedule — це офіціант 🛎️ з розкладом. Налаштували один раз — і він доставляє страви (звіти) гостям автоматично."
+        },
+        {
+            type: "match",
+            question: "З'єднай етап створення звіту з кухонною аналогією:",
+            pairs: [
+                { left: "Дані з Databricks", right: "Інгредієнти зі складу" },
+                { left: "HTML-звіт", right: "Готова страва" },
+                { left: "GitHub Pages", right: "Вітрина ресторану" },
+                { left: "Looker Schedule", right: "Офіціант з розкладом" }
+            ]
+        },
+        {
+            type: "choice",
+            question: "Як перевірити HTML-звіт перед відправкою?",
+            options: [
+                "Надіслати одразу партнеру",
+                "Відкрити файл у браузері та перевірити візуально",
+                "Прочитати HTML-код вручну",
+                "Спитати колегу"
+            ],
+            correct: 1,
+            explanation: "Завжди пробуйте страву перед подачею! Відкрийте HTML-файл у браузері, перевірте що все виглядає правильно."
+        }
+    ]);
+    </script>
+</body>
+</html>

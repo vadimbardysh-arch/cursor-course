@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor AI — Курс для команди</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+</head>
+<body>
+
+    <!-- Name Input Overlay -->
+    <div id="name-overlay" class="name-overlay hidden">
+        <div class="name-card">
+            <h2>👋 Вітаємо на курсі!</h2>
+            <p>Введи своє ім'я, щоб ми могли відслідковувати твій прогрес</p>
+            <input type="text" class="name-input" placeholder="Твоє ім'я..." autofocus>
+            <button class="name-submit">Почати навчання →</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="course-hero">
+        <h1>🍳 Cursor AI для команди</h1>
+        <p>Від нуля до автоматизації — простий курс для тих, хто далекий від коду</p>
+        <div id="user-greeting" style="font-size:18px;margin-bottom:20px;opacity:0.9"></div>
+        <div style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:12px">
+            <div class="hero-progress">
+                <span class="hero-progress-label">0 з 8 модулів</span>
+                <div class="hero-progress-bar">
+                    <div class="hero-progress-fill" style="width: 0%"></div>
+                </div>
+            </div>
+            <div class="hero-progress">
+                <span>🏆</span>
+                <span id="total-points">0</span>
+                <span>очок</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Kitchen Map Banner -->
+    <section class="modules-grid" style="padding-bottom: 0">
+        <a href="modules/kitchen-map.html" class="module-card" style="background:linear-gradient(135deg,#fef3c7,#fde68a);border-color:#f59e0b;">
+            <div class="module-card-icon" style="background:#fef3c7;font-size:32px">🍳</div>
+            <div class="module-card-body">
+                <div class="module-card-label" style="color:#92400e">Почни тут</div>
+                <div class="module-card-title">Карта ресторану — як все працює разом</div>
+                <div class="module-card-desc">Ресторанна аналогія: Cursor = кухня, AI = шеф-повар, Databricks = склад. Прочитай перед модулями!</div>
+            </div>
+            <div style="font-size:24px">→</div>
+        </a>
+    </section>
+
+    <!-- Module Cards -->
+    <section class="modules-grid">
+        <h2>📚 Програма курсу</h2>
+
+        <a href="modules/module-0.html" class="module-card" data-module="0">
+            <div class="module-card-icon">🚀</div>
+            <div class="module-card-body">
+                <div class="module-card-label">Модуль 0</div>
+                <div class="module-card-title">Що таке Cursor і навіщо він нам?</div>
+                <div class="module-card-desc">Знайомство з інструментом, інтерфейс, перші кроки</div>
+                <div class="module-card-meta">⏱ 15 хв · 5 питань</div>
+            </div>
+            <div class="module-card-status"></div>
+        </a>
+
+        <a href="modules/module-1.html" class="module-card" data-module="1">
+            <div class="module-card-icon">📁</div>
+            <div class="module-card-body">
+                <div class="module-card-label">Модуль 1</div>
+                <div class="module-card-title">Google Drive Desktop — робочий простір</div>
+                <div class="module-card-desc">Встановлення, підключення до Cursor, робота з файлами</div>
+                <div class="module-card-meta">⏱ 10 хв · 4 питання</div>
+            </div>
+            <div class="module-card-status"></div>
+        </a>
+
+        <a href="modules/module-2.html" class="module-card" data-module="2">
+            <div class="module-card-icon">✍️</div>
+            <div class="module-card-body">
+                <div class="module-card-label">Модуль 2</div>
+                <div class="module-card-title">Мистецтво промтів</div>
+                <div class="module-card-desc">Як правильно формулювати запити, щоб Cursor робив те, що потрібно</div>
+                <div class="module-card-meta">⏱ 30 хв · 5 питань</div>
+            </div>
+            <div class="module-card-status"></div>
+        </a>
+
+        <a href="modules/module-3.html" class="module-card" data-module="3">
+            <div class="module-card-icon">🔌</div>
+            <div class="module-card-body">
+                <div class="module-card-label">Модуль 3</div>
+                <div class="module-card-title">MCP — підключення зовнішніх сервісів</div>
+                <div class="module-card-desc">Slack, Atlassian та інші інтеграції через MCP</div>
+                <div class="module-card-meta">⏱ 20 хв · 4 питання</div>
+            </div>
+            <div class="module-card-status"></div>
+        </a>
+
+        <a href="modules/module-4.html" class="module-card" data-module="4">
+            <div class="module-card-icon">🗄️</div>
+            <div class="module-card-body">
+                <div class="module-card-label">Модуль 4</div>
+                <div class="module-card-title">Databricks — робота з даними</div>
+                <div class="module-card-desc">Підключення, запити, основні таблиці компанії</div>
+                <div class="module-card-meta">⏱ 25 хв · 5 питань</div>
+            </div>
+            <div class="module-card-status"></div>
+        </a>
+
+        <a href="modules/module-5.html" class="module-card" data-module="5">
+            <div class="module-card-icon">📊</div>
+            <div class="module-card-body">
+                <div class="module-card-label">Модуль 5</div>
+                <div class="module-card-title">HTML-звіти та Looker автоматизація</div>
+                <div class="module-card-desc">Створення звітів, Looker Schedule, автоматична розсилка</div>
+                <div class="module-card-meta">⏱ 25 хв · 4 питання</div>
+            </div>
+            <div class="module-card-status"></div>
+        </a>
+
+        <a href="modules/module-6.html" class="module-card" data-module="6">
+            <div class="module-card-icon">⚡</div>
+            <div class="module-card-body">
+                <div class="module-card-label">Модуль 6</div>
+                <div class="module-card-title">GitHub — автоматизація та публікація</div>
+                <div class="module-card-desc">GitHub Pages, GitHub Actions, автоматичні процеси</div>
+                <div class="module-card-meta">⏱ 30 хв · 5 питань</div>
+            </div>
+            <div class="module-card-status"></div>
+        </a>
+
+        <a href="modules/module-7.html" class="module-card" data-module="7">
+            <div class="module-card-icon">💡</div>
+            <div class="module-card-body">
+                <div class="module-card-label">Модуль 7</div>
+                <div class="module-card-title">Лайфхаки та просунуті техніки</div>
+                <div class="module-card-desc">Гарячі клавіші, Rules, Skills, best practices</div>
+                <div class="module-card-meta">⏱ 20 хв · 5 питань</div>
+            </div>
+            <div class="module-card-status"></div>
+        </a>
+    </section>
+
+    <footer class="course-footer">
+        <p>Cursor AI Course · Створено з ❤️ за допомогою Cursor</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            updateProgressUI();
+        });
+    </script>
+</body>
+</html>
