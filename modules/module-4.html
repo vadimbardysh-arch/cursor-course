@@ -32,7 +32,7 @@
         <h1>🗄️ Databricks — робота з даними</h1>
         <p class="module-desc">Підключення до бази даних компанії, SQL-запити через Cursor, основні таблиці</p>
         <div class="module-meta">
-            <span>⏱ 25 хвилин</span>
+            <span>⏱ 30 хвилин</span>
             <span>📝 5 питань у квізі</span>
         </div>
     </header>
@@ -105,9 +105,67 @@
             </div>
         </section>
 
-        <!-- Section 3 -->
+        <!-- Section 3: Setup -->
         <section class="lesson">
-            <h2>3. 🪄 Як попросити Cursor витягнути дані</h2>
+            <h2>3. 🛠️ Як налаштувати Databricks (перший раз)</h2>
+
+            <p>Перед тим як почати працювати з даними, потрібно зробити кілька речей. Це робиться <strong>один раз</strong> — потім все працює автоматично.</p>
+
+            <div class="error-box">
+                🔑 <strong>Передумова: доступ до Databricks</strong><br>
+                Ти повинен мати доступ до <strong>Databricks Incentives</strong> через <strong>Okta</strong>. Якщо при вході в Okta ти не бачиш додаток "Databricks Incentives" — напиши в IT Support або попроси менеджера додати тобі доступ.
+            </div>
+
+            <h3>Крок 1: Підключи MCP Databricks</h3>
+
+            <p>MCP Databricks — це "прямий телефон" між Cursor та складом даних. Без нього шеф-повар не зможе зателефонувати на склад.</p>
+
+            <div class="info-box">
+                💡 Як підключити: відкрий <strong>Cursor Settings → MCP</strong> і знайди <strong>Databricks</strong> у маркетплейсі. Детальна інструкція — у <a href="module-3.html">Модулі 3 (MCP)</a>.
+            </div>
+
+            <h3>Крок 2: Додай конфігураційні файли у проєкт</h3>
+
+            <p>У нас є спеціальна папка з файлами налаштувань (<code>dbx.py</code>, <code>.env</code>, Cursor Rules). Ці файли <strong>повинні бути у твоєму робочому проєкті</strong> (тій папці, яку ти відкриваєш у Cursor).</p>
+
+            <div class="step-by-step">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Відкрий папку з файлами</h3>
+                        <p>Перейди за посиланням і завантаж або скопіюй файли собі:</p>
+                        <p><a href="https://drive.google.com/drive/folders/1l2Isz0IoXsGQJVQxI5v0wKckRkQz0CFX" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:linear-gradient(135deg,#4285f4,#34a853);color:white;border-radius:8px;text-decoration:none;font-weight:600;">📁 Відкрити папку на Google Drive →</a></p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Розмісти файли в проєкті</h3>
+                        <p>Файли з цієї папки повинні бути у <strong>кореневій директорії</strong> твого робочого проєкту в Cursor (тобто в тій самій папці, яку ти відкрив через File → Open Folder).</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Перший промт для налаштування</h3>
+                        <p>Після того як файли на місці, напиши Cursor свій <strong>перший промт</strong>:</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-box example-good">
+                <div class="example-label">Перший промт для налаштування Databricks</div>
+                <p><em>«Налаштуй, будь ласка, підключення до Databricks, використовуючи конфігураційні файли, які є в цьому проєкті (dbx.py, .env та інші). Перевір, що все працює, і зроби тестовий запит.»</em></p>
+            </div>
+
+            <div class="success-box">
+                ✅ <strong>Cursor сам розбереться!</strong> Він прочитає файли з папки, зрозуміє структуру, налаштує підключення і перевірить, що все працює. Тобі не потрібно знати, що всередині цих файлів.
+            </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="lesson">
+            <h2>4. 🪄 Як попросити Cursor витягнути дані</h2>
 
             <p>Все дуже просто — достатньо написати промт з магічним словом <strong>dbx</strong>!</p>
 
@@ -144,9 +202,9 @@
             </div>
         </section>
 
-        <!-- Section 4 -->
+        <!-- Section 5 -->
         <section class="lesson">
-            <h2>4. 📋 Основні таблиці, які ми використовуємо</h2>
+            <h2>5. 📋 Основні таблиці, які ми використовуємо</h2>
 
             <p>У нашій «бібліотеці» є різні «полиці» (таблиці). Ось головні, які тобі знадобляться:</p>
 
@@ -204,9 +262,9 @@
             </div>
         </section>
 
-        <!-- Section 5 -->
+        <!-- Section 6 -->
         <section class="lesson">
-            <h2>5. ⚠️ Важливі правила (запам'ятай!)</h2>
+            <h2>6. ⚠️ Важливі правила (запам'ятай!)</h2>
 
             <p>Cursor напише SQL за тебе, але є кілька правил, які варто знати. Якщо щось піде не так — перевір ці пункти:</p>
 
@@ -235,9 +293,9 @@
             </div>
         </section>
 
-        <!-- Section 6 -->
+        <!-- Section 7 -->
         <section class="lesson">
-            <h2>6. 🎯 Практичний приклад: від промта до результату</h2>
+            <h2>7. 🎯 Практичний приклад: від промта до результату</h2>
 
             <p>Давай пройдемо весь процес від початку до кінця:</p>
 
